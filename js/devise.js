@@ -15,6 +15,11 @@ $(function () {
     head2_1_disappear_px = 4400;
     head2_2_appear_px = 5200;
     head2_2_disappear_px = 6000;
+    head3_1_appear_px = 6200;
+    head3_1_model_appear_px = 6600;
+    head3_1_country_appear_px = 7000;
+    head3_1_text_appear_px = 7400;
+    head3_1_disappear_px = 8200;
     //デバイススライド開始・停止px
     slide_begin_px = 600;
     slide_stop_px = 1370;
@@ -22,7 +27,7 @@ $(function () {
     slide_stop_px2 = 3230;
     matrix_px = 4400;
     matrix_end_px = 5200;
-
+    devise_disappear_px = 6000;
     console.log(scroll);
 
     if (scroll > head_top_disappear_px) {
@@ -45,7 +50,7 @@ $(function () {
       $('#head2_1').removeClass('none');
     } else if (scroll < head2_2_appear_px) {
       $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');      
+      $('#head2_2').addClass('none');
     } else if (scroll < head2_2_disappear_px) {
       $('#head2_2').removeClass('none');
       $('#head2_foot_img').removeClass('none');
@@ -54,6 +59,22 @@ $(function () {
       $('.img_ex3').css({left: '1100px'});
       $('.img_ex4').css({left: '1470px'});
       setTimeout(function(){$('.exs').removeClass('none');},1000);
+    } else if (scroll < head3_1_appear_px) {
+      $('#head2_2').addClass('none');
+      $('#head3_1').addClass('none');
+      $('.header_content').css({color: 'black'});
+    } else if (scroll < head3_1_model_appear_px) {
+      $('#head3_1').removeClass('none');
+      $('#head3_1_model').addClass('none');
+      $('.header_content').css({color: 'white'});
+    } else if (scroll < head3_1_country_appear_px) {
+      $('#head3_1_model').removeClass('none');
+      $('#head3_1_sphere').addClass('none');
+    } else if (scroll < head3_1_text_appear_px) {
+      $('#head3_1_sphere').removeClass('none');
+      $('#head3_1_text').addClass('none');
+    } else if (scroll < head3_1_disappear_px) {
+      $('#head3_1_text').removeClass('none');
     }
 
     //デバイススライド
@@ -76,9 +97,14 @@ $(function () {
     } else if (scroll < matrix_end_px) {
       $devise.css({left: '830px'});
       $devise.css({transform: 'matrix(0.97, -0.26, 0.26, 0.97, 0, 0)'});
-    } else if (scroll < 1000000) {
+    } else if (scroll < devise_disappear_px) {
       $devise.css({left: '930px'});
       $devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
+      $devise.removeClass('none');
+
+    } else if (scroll < 1000000) {
+      $devise.addClass('none');
+
     }
 
     //ページ数関連
@@ -88,10 +114,15 @@ $(function () {
       $bottle_count.html("01");
       $('.page_point1').css({opacity: 1});
       $('.page_point2').css({opacity: 0.2});
-    } else if (scroll < head2_1_disappear_px) {
+    } else if (scroll < head2_2_disappear_px) {
       $bottle_count.html("02");
       $('.page_point1').css({opacity: 0.2});
       $('.page_point2').css({opacity: 1});
+      $('.fixed_sideline').removeClass('none');
+    } else if (scroll < head3_1_disappear_px) {
+      $bottle_count.html("03");
+      $('.fixed_sideline').addClass('none');
+
     }
 
   });

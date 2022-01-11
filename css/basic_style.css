@@ -61,7 +61,7 @@ body {
 #main_bg { background: url("../bg/bg1.png") no-repeat top center; height:    15895px; position: relative; background-attachment: fixed;} 
 /* #head1 { background: url("../bg/bg1.png") no-repeat top center; height:    1895px; position: relative; background-attachment: fixed;} 
 #head2 { background: url("../bg/bg1.png") no-repeat top center; height:    900px; }  */
-#head3 { background: url("../img1/10.png") no-repeat #FFC500 top center; height:   62px; } 
+#head3 { background: url("../bg/bg_earth.png") no-repeat #FFC500 top center; height:   62px; } 
 #head4 { background: url("../bg/bg2.jpg") no-repeat top center; height:    540px; } 
 #head5 { background: url("../img1/17.png") no-repeat #FF9A0D top center; height:   62px; } 
 #head6 { background: url("../bg/bg1.jpg") no-repeat top center; height:   590px; } 
