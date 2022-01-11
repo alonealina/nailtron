@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> </title>
+<meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+<link rel=stylesheet type=text/css href="css/basic_style.css">
+
+	
+<!-- jQuery.jsの読み込み -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<link href="css/animations.css" rel="stylesheet" media="all">
+<link href="css/animation.css" rel="stylesheet" media="all">
+<script src="js/setup.js"></script>
+
+<meta name=robots content=noindex,nofollow>
+<meta name=GENERATOR content="MSHTML 11.00.9600.17207">
+
+<link rel=stylesheet type=text/css href="css/aa.css">
+<link rel="icon" type="image/png" href="images/favicon.jpg" sizes="16x16">
+</head>
+
+<body id="main">
+
+<div id="a">
+
+<div id="registration_pc"><div id="head1"></div></div>
+<div id="registration_sp"><div id="head1sp"></div></div>    
+    
+<div id="head2">
+<div id="container">
+  <img class="sa sa--up" src="images/1.png" data-sa_margin="100" style="margin:60px 0px 0px 0px;" /><br/>
+</div>
+</div>
+<div id="head3">
+<div id="container">
+<div class="btn_box">
+ <a href=""><img class="btn" src="./images/btn.png" style="margin-top:0px;"></a>
+</div> 
+</div> 
+</div>
+	
+<div id="head4">
+  <img class="sa sa--lr" src="images/2.png" data-sa_margin="100" style="margin:70px 0px 0px 0px;" /><br/>
+</div>
+ 
+<div id="head5">
+  <img class="sa sa--rl" src="images/3.png" data-sa_margin="100" style="margin:80px 0px 0px 0px;" /><br/>
+</div>
+<div id="head6"></div>
+<div id="head7">
+<div id="container">
+<div class="btn_box1">
+ <a href=""><img class="btn" src="./images/btn.png" style="margin:0px 0 0 0"></a>
+</div>  
+</div>  
+</div>
+	<!------------------------------------------------------------------------->
+
+<div id="kc01" class="kc03"></div>
+
+	<!--フッター特商法-->
+<footer>
+  <span class="block"><a class="toku" href="privacy/tokutei.html" target="_blank">特定商取引法に基づく表示</a>｜<a class="toku" href="privacy/privacy.html" target="_blank">プライバシーポリシー</a></span>
+  <small><span class="copy2">Copyright © 2019 All rights reserved.</span></small>
+</footer>	
+<script>
+			$(document).ready(function() {
+				$(window).fadeThis({
+					speed: 350,
+				});
+			});
+			
+			var scrollAnimationElm = document.querySelectorAll('.sa');
+var scrollAnimationFunc = function() {
+  for(var i = 0; i < scrollAnimationElm.length; i++) {
+    var triggerMargin = 200;
+    var elm = scrollAnimationElm[i];
+    var showPos = 0;
+    if(elm.dataset.sa_margin != null) {
+      triggerMargin = parseInt(elm.dataset.sa_margin);
+    }
+    if(elm.dataset.sa_trigger) {
+      showPos = document.querySelector(elm.dataset.sa_trigger).getBoundingClientRect().top + triggerMargin;
+    } else {
+      showPos = elm.getBoundingClientRect().top + triggerMargin;
+    }
+    if (window.innerHeight > showPos) {
+      var delay = (elm.dataset.sa_delay)? elm.dataset.sa_delay : 0;
+      setTimeout(function(index) {
+        scrollAnimationElm[index].classList.add('show');
+      }.bind(null, i), delay);
+    }
+  }
+}
+window.addEventListener('load', scrollAnimationFunc);
+window.addEventListener('scroll', scrollAnimationFunc);
+</script>
+
+</body>
+</HTML>
