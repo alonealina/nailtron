@@ -48,8 +48,13 @@ $(function () {
       $('#head2_2').addClass('none');      
     } else if (scroll < head2_2_disappear_px) {
       $('#head2_2').removeClass('none');
+      $('#head2_foot_img').removeClass('none');
+      $('.img_ex1').css({left: '360px'});
+      $('.img_ex2').css({left: '730px'});
+      $('.img_ex3').css({left: '1100px'});
+      $('.img_ex4').css({left: '1470px'});
+      setTimeout(function(){$('.exs').removeClass('none');},1000);
     }
-
 
     //デバイススライド
     if (scroll < slide_begin_px) {
