@@ -1,6 +1,8 @@
 $(function () {
   var $win = $(window),
   $devise = $('.devise');
+  $devise2 = $('.devise2');
+  $curtain = $('.curtain');
   var $bottle_count = $('.bottle_count');
   // current = $devise.offset().left;
   scroll;
@@ -25,6 +27,7 @@ $(function () {
     head3_2_disappear_px = 11000;
     head4_curtain_px = 11500;
     head4_devise_px = 12000;
+    head4_text_px = 12500;
     //デバイススライド開始・停止px
     slide_begin_px = 600;
     slide_stop_px = 1370;
@@ -121,10 +124,18 @@ $(function () {
       $('.fixed_head').removeClass('none');
       $('.fixed_foot').removeClass('none');
       $('.header_content').css({color: 'white'});
+      $('#head4').addClass('none');
     } else if (scroll < head4_curtain_px) {
       //head3_2非表示
       $('#head3_2').addClass('none');
+      $('#head4').removeClass('none');
       $('.header_content').css({color: 'black'});
+    } else if (scroll < head4_text_px) {
+      //head4テキスト表示まで
+      $('#head4_text').addClass('none');
+    } else if (scroll < 100000) {
+      //head4テキスト表示まで
+      $('#head4_text').removeClass('none');
     }
     
     //デバイススライド
@@ -152,9 +163,30 @@ $(function () {
       $devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
       $devise.css({zIndex: '200'});
       $devise.removeClass('none');
-    } else if (scroll < 1000000) {
+    } else if (scroll < head4_devise_px) {
       $devise.addClass('none');
-      $devise.css({zIndex: '0'});
+      $devise.css({zIndex: '-100'});
+      $devise2.addClass('none');
+      $devise2.css({zIndex: '-100'});
+    } else {
+      $devise2.removeClass('none');
+      $devise2.css({zIndex: '0'});
+      $devise.addClass('none');
+      $devise.css({zIndex: '-100'});
+    }
+
+    //カーテン
+    if (scroll < head3_2_disappear_px) {
+      $curtain.css({top: '-1300px'});
+      $curtain.css({left: '1160px'});
+    } else if (scroll < head4_curtain_px) {
+      current = (scroll - head3_2_disappear_px) * 10 - 1300;
+      if (current > -40) {
+        current = -40;
+      }
+      console.log(current);
+      $curtain.css({top: current + 'px'});
+      $curtain.css({left: -140 - (current) + 'px'});
     }
 
     //ページ数関連

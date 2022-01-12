@@ -215,6 +215,14 @@ body {
   opacity: 0;
 }
 
+.border {
+  margin: 0 10px 7px 10px;
+}
+
+.dot {
+  margin: 0 10px 5px 10px;
+}
+
 #a {
     overflow: hidden;
 }
