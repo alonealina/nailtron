@@ -133,9 +133,21 @@ $(function () {
     } else if (scroll < head4_text_px) {
       //head4テキスト表示まで
       $('#head4_text').addClass('none');
+      $('.head4_text1').css({left: '2500px'});
+      $('.head4_text2').css({left: '2500px'});
+      $('.head4_text3').css({left: '2500px'});
+      $('.head4_text4').css({left: '2500px'});
+      $('.head4_text5').css({left: '2500px'});
+      $('.head4_text6').css({left: '2500px'});
     } else if (scroll < 100000) {
       //head4テキスト表示まで
       $('#head4_text').removeClass('none');
+      $('.head4_text1').css({left: '1272px'});
+      $('.head4_text2').css({left: '1037px'});
+      $('.head4_text3').css({left: '1106px'});
+      $('.head4_text4').css({left: '824px'});
+      $('.head4_text5').css({left: '517px'});
+      $('.head4_text6').css({left: '378px'});
     }
     
     //デバイススライド
