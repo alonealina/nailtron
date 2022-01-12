@@ -58,26 +58,7 @@ body {
     color: #2e2e2e;
 }
 
-#main_bg { background: url("../bg/bg1.png") no-repeat top center; height:    15895px; position: relative; background-attachment: fixed;} 
-/* #head1 { background: url("../bg/bg1.png") no-repeat top center; height:    1895px; position: relative; background-attachment: fixed;} 
-#head2 { background: url("../bg/bg1.png") no-repeat top center; height:    900px; }  */
-#head3 { background: url("../bg/bg_earth.png") no-repeat #FFC500 top center; height:   62px; } 
-#head4 { background: url("../bg/bg2.jpg") no-repeat top center; height:    540px; } 
-#head5 { background: url("../img1/17.png") no-repeat #FF9A0D top center; height:   62px; } 
-#head6 { background: url("../bg/bg1.jpg") no-repeat top center; height:   590px; } 
-#head7 { background: url("../img1/23.png") no-repeat #FFC500 top center; height:   62px; } 
-#head8 { background: url("../bg/bg2.jpg") no-repeat top center; height:   590px; } 
-#head9 { background: url("../bg/bg1.jpg") no-repeat top center; height:    750px; } 
-#head10 { background: url("../bg/bg2.jpg") top center; height:   1300px; } 
-#head11 { background: #797979 top center; height:   500px; } 
-#head12 { background: url("../img1/31.png") no-repeat #FFC500 top center; height:   62px; } 
-#head13 { background: url("../bg/bg2.jpg") top center; height:   500px; } 
-#head14 { background: url("../img1/38.png") no-repeat #FF9A0D top center; height:   62px; } 
-#head15 { background: url("../img1/41.png") no-repeat top center; height:   300px; } 
-#head16 { background: url("../img2/42.png") no-repeat #FFC500 top center; height:   62px; } 
-#head17 { background: url("../bg/bg2.jpg") top center; height:   2510px; } 
-#head18 { background: url("../img2/48.png") no-repeat #FF9A0D top center; height:   62px; } 
-#head19 { background: url("../img2/51.png") no-repeat #FFC500 top center; height:   62px; } 
+#main_bg { background: url("../bg/bg1.png") no-repeat top center; height:    25895px; position: relative; background-attachment: fixed;} 
 
 #head1sp { background: url("../img_sp/bg1.png") #FF7C92 no-repeat top center; height:    590px; } 
 #head2sp { background: url("../bg/bg1.jpg") no-repeat top center; } 

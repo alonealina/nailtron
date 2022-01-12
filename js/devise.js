@@ -28,6 +28,8 @@ $(function () {
     head4_curtain_px = 11500;
     head4_devise_px = 12000;
     head4_text_px = 12500;
+    head4_disappear_px = 13400;
+    faq_appear_px = 16500;
     //デバイススライド開始・停止px
     slide_begin_px = 600;
     slide_stop_px = 1370;
@@ -139,8 +141,8 @@ $(function () {
       $('.head4_text4').css({left: '2500px'});
       $('.head4_text5').css({left: '2500px'});
       $('.head4_text6').css({left: '2500px'});
-    } else if (scroll < 100000) {
-      //head4テキスト表示まで
+    } else if (scroll < head4_disappear_px) {
+      //head4テキスト表示
       $('#head4_text').removeClass('none');
       $('.head4_text1').css({left: '1272px'});
       $('.head4_text2').css({left: '1037px'});
@@ -148,6 +150,17 @@ $(function () {
       $('.head4_text4').css({left: '824px'});
       $('.head4_text5').css({left: '517px'});
       $('.head4_text6').css({left: '378px'});
+      $('#head4').removeClass('none');
+      $('#head5').addClass('none');
+    } else if (scroll < faq_appear_px) {
+      //head5表示
+      $('#head4').addClass('none');
+      $('#head5').removeClass('none');
+      $('#head6').addClass('none');
+    } else if (scroll < 100000) {
+      //head6(FAQ)表示
+      $('#head5').addClass('none');
+      $('#head6').removeClass('none');
     }
     
     //デバイススライド
@@ -208,20 +221,38 @@ $(function () {
       $bottle_count.html("01");
       $('.page_point1').css({opacity: 1});
       $('.page_point2').css({opacity: 0.2});
-    } else if (scroll < head2_2_disappear_px) {
+    } else if (scroll < head2_1_disappear_px) {
       $bottle_count.html("02");
       $('.page_point1').css({opacity: 0.2});
       $('.page_point2').css({opacity: 1});
-      $('.page_point4').css({opacity: 0.2});
-      $('.fixed_sideline').removeClass('none');
-    } else if (scroll < head3_2_disappear_px) {
+      $('.page_point3').css({opacity: 0.2});
+    } else if (scroll < head2_2_disappear_px) {
       $bottle_count.html("03");
-      $('.fixed_sideline').addClass('none');
-    } else if (scroll < 1000000) {
-      $bottle_count.html("04");
       $('.page_point2').css({opacity: 0.2});
-      $('.page_point4').css({opacity: 1});
+      $('.page_point3').css({opacity: 1});
+      $('.page_point6').css({opacity: 0.2});
       $('.fixed_sideline').removeClass('none');
+    } else if (scroll < head3_black_text_px) {
+      $bottle_count.html("04");
+      $('.fixed_sideline').addClass('none');
+    } else if (scroll < head3_2_disappear_px) {
+      $bottle_count.html("05");
+      $('.fixed_sideline').addClass('none');
+    } else if (scroll < head4_disappear_px) {
+      $bottle_count.html("06");
+      $('.page_point3').css({opacity: 0.2});
+      $('.page_point6').css({opacity: 1});
+      $('.page_point7').css({opacity: 0.2});
+      $('.fixed_sideline').removeClass('none');
+    } else if (scroll < faq_appear_px) {
+      $bottle_count.html("07");
+      $('.page_point6').css({opacity: 0.2});
+      $('.page_point7').css({opacity: 1});
+      $('.page_point8').css({opacity: 0.2});
+    } else if (scroll < 100000) {
+      $bottle_count.html("08");
+      $('.page_point7').css({opacity: 0.2});
+      $('.page_point8').css({opacity: 1});
     }
 
   });
