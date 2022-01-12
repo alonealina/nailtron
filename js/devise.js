@@ -20,6 +20,8 @@ $(function () {
     head3_1_country_appear_px = 7000;
     head3_1_text_appear_px = 7400;
     head3_1_disappear_px = 8200;
+    head3_black_text_px = 9000;
+    head3_2_appear_px = 9800;
     //デバイススライド開始・停止px
     slide_begin_px = 600;
     slide_stop_px = 1370;
@@ -51,6 +53,10 @@ $(function () {
     } else if (scroll < head2_2_appear_px) {
       $('#head2_1').addClass('none');
       $('#head2_2').addClass('none');
+      $('.img_ex1').css({left: '-300px'});
+      $('.img_ex2').css({left: '-300px'});
+      $('.img_ex3').css({left: '-300px'});
+      $('.img_ex4').css({left: '-300px'});
     } else if (scroll < head2_2_disappear_px) {
       $('#head2_2').removeClass('none');
       $('#head2_foot_img').removeClass('none');
@@ -64,19 +70,58 @@ $(function () {
       $('#head3_1').addClass('none');
       $('.header_content').css({color: 'black'});
     } else if (scroll < head3_1_model_appear_px) {
+      //head3地球背景表示
       $('#head3_1').removeClass('none');
       $('#head3_1_model').addClass('none');
       $('.header_content').css({color: 'white'});
     } else if (scroll < head3_1_country_appear_px) {
+      //head3モデル表示
       $('#head3_1_model').removeClass('none');
       $('#head3_1_sphere').addClass('none');
+      $('.sphere_por').css({left: '-300px'});
+      $('.sphere_jap').css({left: '-300px'});
+      $('.sphere_ame').css({left: '-300px'});
+      $('.sphere_bra').css({left: '-300px'});
     } else if (scroll < head3_1_text_appear_px) {
+      //head3国球体表示
       $('#head3_1_sphere').removeClass('none');
+      $('.sphere_por').css({left: '450px'});
+      $('.sphere_jap').css({left: '750px'});
+      $('.sphere_ame').css({left: '1050px'});
+      $('.sphere_bra').css({left: '1350px'});
       $('#head3_1_text').addClass('none');
     } else if (scroll < head3_1_disappear_px) {
+      //head3テキスト表示
       $('#head3_1_text').removeClass('none');
-    }
+      $('#head3_1').removeClass('none');
+      $('.fixed_head').removeClass('none');
+      $('.fixed_foot').removeClass('none');
+      $('#head3_black').addClass('none');
+    } else if (scroll < head3_black_text_px) {
+      //ブラックアウト
+      $('#head3_1').addClass('none');
+      $('.fixed_head').addClass('none');
+      $('.fixed_foot').addClass('none');
+      $('#head3_black').removeClass('none');
+      $('.black_text').addClass('none');
+    } else if (scroll < head3_2_appear_px) {
+      //テキスト表示
+      $('.black_text').removeClass('none');
+      $('#head3_black').removeClass('none');
+      $('#head3_2').addClass('none');
+      $('.fixed_head').addClass('none');
+      $('.fixed_foot').addClass('none');
 
+    } else if (scroll < 100000) {
+      //head3_2表示
+      $('#head3_black').addClass('none');
+      $('#head3_2').removeClass('none');
+      $('.fixed_head').removeClass('none');
+      $('.fixed_foot').removeClass('none');
+      $('.header_content').css({color: 'white'});
+
+    }
+    
     //デバイススライド
     if (scroll < slide_begin_px) {
       $devise.css({left: '1270px'});
@@ -119,7 +164,7 @@ $(function () {
       $('.page_point1').css({opacity: 0.2});
       $('.page_point2').css({opacity: 1});
       $('.fixed_sideline').removeClass('none');
-    } else if (scroll < head3_1_disappear_px) {
+    } else if (scroll < 100000) {
       $bottle_count.html("03");
       $('.fixed_sideline').addClass('none');
 
