@@ -187,8 +187,32 @@ body {
   z-index: -1;
 }
 
+.transition3s {
+  transition-duration: .3s;
+}
+
 .transition6s {
   transition-duration: .6s;
+}
+
+.rola_color {
+  height: 370px;
+  top: 180px;
+  opacity: 0;
+}
+
+.rola_color:hover {
+  height:450px;
+  top:100px;
+  opacity: 1;
+}
+
+.rola {
+  opacity: 1;
+}
+
+.rola_color:hover + .rola {
+  opacity: 0;
 }
 
 #a {

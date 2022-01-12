@@ -22,6 +22,9 @@ $(function () {
     head3_1_disappear_px = 8200;
     head3_black_text_px = 9000;
     head3_2_appear_px = 9800;
+    head3_2_disappear_px = 11000;
+    head4_curtain_px = 11500;
+    head4_devise_px = 12000;
     //デバイススライド開始・停止px
     slide_begin_px = 600;
     slide_stop_px = 1370;
@@ -111,15 +114,17 @@ $(function () {
       $('#head3_2').addClass('none');
       $('.fixed_head').addClass('none');
       $('.fixed_foot').addClass('none');
-
-    } else if (scroll < 100000) {
+    } else if (scroll < head3_2_disappear_px) {
       //head3_2表示
       $('#head3_black').addClass('none');
       $('#head3_2').removeClass('none');
       $('.fixed_head').removeClass('none');
       $('.fixed_foot').removeClass('none');
       $('.header_content').css({color: 'white'});
-
+    } else if (scroll < head4_curtain_px) {
+      //head3_2非表示
+      $('#head3_2').addClass('none');
+      $('.header_content').css({color: 'black'});
     }
     
     //デバイススライド
@@ -145,11 +150,11 @@ $(function () {
     } else if (scroll < devise_disappear_px) {
       $devise.css({left: '930px'});
       $devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
+      $devise.css({zIndex: '200'});
       $devise.removeClass('none');
-
     } else if (scroll < 1000000) {
       $devise.addClass('none');
-
+      $devise.css({zIndex: '0'});
     }
 
     //ページ数関連
@@ -163,11 +168,16 @@ $(function () {
       $bottle_count.html("02");
       $('.page_point1').css({opacity: 0.2});
       $('.page_point2').css({opacity: 1});
+      $('.page_point4').css({opacity: 0.2});
       $('.fixed_sideline').removeClass('none');
-    } else if (scroll < 100000) {
+    } else if (scroll < head3_2_disappear_px) {
       $bottle_count.html("03");
       $('.fixed_sideline').addClass('none');
-
+    } else if (scroll < 1000000) {
+      $bottle_count.html("04");
+      $('.page_point2').css({opacity: 0.2});
+      $('.page_point4').css({opacity: 1});
+      $('.fixed_sideline').removeClass('none');
     }
 
   });
