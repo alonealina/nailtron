@@ -330,14 +330,25 @@
         </div>
         <img src="./img1/border_faq.png" style="top:360px; left:390px; position: relative; z-index: 10;" class="transition6s">
       </div>
+      <input type="checkbox" id="add_faq" class="faq_checkbox">
+      <label for="add_faq" id="" class="label_add"></label>
     </div>
-    <input type="checkbox" id="add_faq" class="faq_checkbox">
-    <label for="add_faq" id="" class="label_add"></label>
+
   </div>
 
 </div>
 
-
+<script>
+  $(function(){
+      $('#add_faq').click(function() {
+          if ($(this).prop('checked')) {
+              $('.add_faq_box').show();
+          } else {
+              $('.add_faq_box').hide();
+          }
+      });
+  });
+  </script>
 
 <div id="registration_sp">
   <div id="head1sp">
