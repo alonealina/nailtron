@@ -266,6 +266,84 @@ body {
   margin: 0 10px 5px 10px;
 }
 
+/*以下FAQ(内容)のボタンについて*/
+/* === BOXの定義 ================================================= */
+.faq_box {
+  position: relative;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 18px;
+  top: 334px;
+  left: 393px;
+}
+
+/* === チェックボックス ========================================== */
+.faq_box > input {
+display       : none;                                   /* 非表示 */
+}
+
+/* === 文書のエリアの高さ（「もっと見る」が表示されているとき）=== */
+.faq_box > input[type="checkbox"]:not(:checked) ~ .faq_content {
+height        : 0px;
+overflow: hidden;
+
+}
+
+/* === 文書のエリアの高さ（「一部を表示」が表示されているとき）=== */
+.faq_box > input[type="checkbox"]:checked ~ .faq_content {
+  display:block;
+  margin-top: 30px;
+}
+
+/* --- ボタン（閉じているとき） -------------------- */
+.faq_box > input[type="checkbox"]:not(:checked) + label {
+background-image       : url(../img1/plus.png);
+background-repeat: no-repeat;
+position      : absolute;
+display       : inline-block;
+right         : 3px;
+width: 40px;
+height: 40px;
+}
+
+/* --- ボタンに表示する文字（開いているとき） -------------------- */
+.faq_box > input[type="checkbox"]:checked + label {
+  background-image       : url(../img1/minus.png);
+  background-repeat: no-repeat;
+  position      : absolute;
+display       : inline-block;
+right         : 3px;
+
+width: 40px;
+height: 40px;
+}
+
+.faq_box > input[type="checkbox"]:checked + .label1 {
+  top       : -60px ;
+}
+
+.faq_box > input[type="checkbox"]:checked + .label2,
+.faq_box > input[type="checkbox"]:checked + .label3,
+.faq_box > input[type="checkbox"]:checked + .label4,
+.faq_box > input[type="checkbox"]:checked + .label5,
+.faq_box > input[type="checkbox"]:checked + .label6,
+.faq_box > input[type="checkbox"]:checked + .label7 {
+  top       : -4px ;
+}
+
+.label1 {
+  top       : -30px ;
+}
+
+.label2, .label3, .label4, .label5, .label6, .label7 {
+  top       : 26px ;
+}
+
+
+
+
+
+
 #a {
     overflow: hidden;
 }
