@@ -30,6 +30,7 @@ $(function () {
     head4_text_px = 12500;
     head4_disappear_px = 13400;
     faq_appear_px = 16500;
+    contact_appear_px = 19000;
     //デバイススライド開始・停止px
     slide_begin_px = 600;
     slide_stop_px = 1370;
@@ -157,10 +158,17 @@ $(function () {
       $('#head4').addClass('none');
       $('#head5').removeClass('none');
       $('#head6').addClass('none');
-    } else if (scroll < 100000) {
+    } else if (scroll < contact_appear_px) {
       //head6(FAQ)表示
       $('#head5').addClass('none');
       $('#head6').removeClass('none');
+      $('#head7').addClass('none');
+      $('.header_content').css({color: 'black'});
+    } else if (scroll < 100000) {
+      //head6(FAQ)表示
+      $('#head6').addClass('none');
+      $('#head7').removeClass('none');
+      $('.header_content').css({color: 'white'});
     }
     
     //デバイススライド
@@ -249,11 +257,18 @@ $(function () {
       $('.page_point6').css({opacity: 0.2});
       $('.page_point7').css({opacity: 1});
       $('.page_point8').css({opacity: 0.2});
-    } else if (scroll < 100000) {
+    } else if (scroll < contact_appear_px) {
       $bottle_count.html("08");
       $('.page_point7').css({opacity: 0.2});
       $('.page_point8').css({opacity: 1});
+      $('.page_point9').css({opacity: 0.2});
+      $('.fixed_sideline').removeClass('none');
+    } else if (scroll < 100000) {
+      $bottle_count.html("09");
+      $('.page_point7').css({opacity: 0.2});
+      $('.page_point8').css({opacity: 0.2});
+      $('.page_point9').css({opacity: 1});
+      $('.fixed_sideline').addClass('none');
     }
-
   });
 });

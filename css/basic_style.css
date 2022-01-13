@@ -366,7 +366,7 @@ height: 80px;
 
 /* --- ボタン（閉じているとき） -------------------- */
 .label_add {
-  background-image       : url(../img1/seemore.png);
+background-image       : url(../img1/seemore.png);
 background-repeat: no-repeat;
 position      : relative;
 display       : block;
@@ -377,7 +377,18 @@ height: 80px;
 }
 
 
-
+.info_address{
+  text-align: left;
+  font: normal normal normal 80px/120px Meiryo;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+  margin-top: 25px;
+	animation : text_scroll 50s linear infinite;
+}
+@keyframes text_scroll{
+   0% { transform: translateX(0%)}
+   100% { transform: translateX(-30%)}
+}
 
 
 
