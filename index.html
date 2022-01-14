@@ -30,7 +30,11 @@
 <div id="registration_pc">
   <div class="fixed_head transition6s">
     <a href=""><img src="./img1/logo.png" style="top:30px; left:289px; position: absolute;"></a>
-    <div class="header_content transition6s" style="top:40px; left:1246px; position: relative; font-size: 12px; color:black;">/　Contact　/　FAQ</div>
+    <div class="header_content transition6s" style="top:40px; left:1246px; position: relative; font-size: 12px; color:black;">/　
+      <div style="display: inline-block; cursor: pointer;" id="menu_contact">Contact</div>
+      　/　
+      <div style="display: inline-block; cursor: pointer;" id="menu_faq">FAQ</div>
+    </div>
     <div class="twitter_logo"><img src="./img1/twitter_logo.png" style="top:10px; right:0px; position: relative;" ></div>
     <div class="insta_logo"><img src="./img1/insta_logo.png" style="top:10px; right:0px; position: relative;" ></div>
     <select class="select_language"><option>EN</option><option>JA</option><option>CH</option></select>
@@ -360,17 +364,6 @@
   </div>
 </div>
 
-<script>
-$(function(){
-  $('#add_faq').click(function() {
-    if ($(this).prop('checked')) {
-      $('.add_faq_box').show();
-    } else {
-      $('.add_faq_box').hide();
-    }
-  });
-});
-</script>
 
 <div id="registration_sp">
   <div id="head1sp">

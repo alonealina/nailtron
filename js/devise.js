@@ -1,10 +1,10 @@
 $(function () {
   var $win = $(window),
-  $devise = $('.devise');
-  $devise2 = $('.devise2');
-  $curtain = $('.curtain');
+  devise = $('.devise');
+  devise2 = $('.devise2');
+  curtain = $('.curtain');
   var $bottle_count = $('.bottle_count');
-  // current = $devise.offset().left;
+  // current = devise.offset().left;
   scroll;
 
   $win.on('load scroll', function () {
@@ -47,7 +47,7 @@ $(function () {
       $('#head_top').removeClass('none');
     }
 
-    //head表示・非表示
+    //head表示・非表示(最低限)
     if (scroll < head1_appear_px) {
       $('#head1').addClass('none');
       $('.fixed_sideline').addClass('none');
@@ -173,53 +173,53 @@ $(function () {
     
     //デバイススライド
     if (scroll < slide_begin_px) {
-      $devise.css({left: '1270px'});
+      devise.css({left: '1270px'});
     } else if (scroll < slide_stop_px) {
       current = 1270 - scroll + slide_begin_px;
       console.log(current);
-      $devise.css({left: current + 'px'});
+      devise.css({left: current + 'px'});
     } else if (scroll < slide_begin_px2) {
-      $devise.css({left: '500px'});
-      $devise.css({transform: 'none'});
+      devise.css({left: '500px'});
+      devise.css({transform: 'none'});
     } else if (scroll < slide_stop_px2) {
       current_left = 500 + scroll - slide_begin_px2;
-      $devise.css({left: current_left + 'px'});
-      $devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
+      devise.css({left: current_left + 'px'});
+      devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
     } else if (scroll < matrix_px) {
-      $devise.css({left: '930px'});
-      $devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
+      devise.css({left: '930px'});
+      devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
     } else if (scroll < matrix_end_px) {
-      $devise.css({left: '830px'});
-      $devise.css({transform: 'matrix(0.97, -0.26, 0.26, 0.97, 0, 0)'});
+      devise.css({left: '830px'});
+      devise.css({transform: 'matrix(0.97, -0.26, 0.26, 0.97, 0, 0)'});
     } else if (scroll < devise_disappear_px) {
-      $devise.css({left: '930px'});
-      $devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
-      $devise.css({zIndex: '200'});
-      $devise.removeClass('none');
+      devise.css({left: '930px'});
+      devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
+      devise.css({zIndex: '200'});
+      devise.removeClass('none');
     } else if (scroll < head4_devise_px) {
-      $devise.addClass('none');
-      $devise.css({zIndex: '-100'});
-      $devise2.addClass('none');
-      $devise2.css({zIndex: '-100'});
+      devise.addClass('none');
+      devise.css({zIndex: '-100'});
+      devise2.addClass('none');
+      devise2.css({zIndex: '-100'});
     } else {
-      $devise2.removeClass('none');
-      $devise2.css({zIndex: '0'});
-      $devise.addClass('none');
-      $devise.css({zIndex: '-100'});
+      devise2.removeClass('none');
+      devise2.css({zIndex: '0'});
+      devise.addClass('none');
+      devise.css({zIndex: '-100'});
     }
 
     //カーテン
     if (scroll < head3_2_disappear_px) {
-      $curtain.css({top: '-1300px'});
-      $curtain.css({left: '1160px'});
+      curtain.css({top: '-1300px'});
+      curtain.css({left: '1160px'});
     } else if (scroll < head4_curtain_px) {
       current = (scroll - head3_2_disappear_px) * 10 - 1300;
       if (current > -40) {
         current = -40;
       }
       console.log(current);
-      $curtain.css({top: current + 'px'});
-      $curtain.css({left: -140 - (current) + 'px'});
+      curtain.css({top: current + 'px'});
+      curtain.css({left: -140 - (current) + 'px'});
     }
 
     //ページ数関連
@@ -272,3 +272,29 @@ $(function () {
     }
   });
 });
+
+$(function(){
+  $('#add_faq').click(function() {
+    if ($(this).prop('checked')) {
+      $('.add_faq_box').show();
+    } else {
+      $('.add_faq_box').hide();
+    }
+  });
+});
+
+$(function(){
+  $('#menu_faq').click(function() {
+    document.documentElement.scrollTop = 17700;
+  });
+});
+
+$(function(){
+  $('#menu_contact').click(function() {
+    document.documentElement.scrollTop = 19500;
+  });
+});
+
+
+
+

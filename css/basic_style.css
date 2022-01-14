@@ -58,7 +58,7 @@ body {
     color: #2e2e2e;
 }
 
-#main_bg { background: url("../bg/bg1.png") no-repeat top center; height:    25895px; position: relative; background-attachment: fixed;} 
+#main_bg { background: url("../bg/bg1.png") no-repeat top center; height:    20500px; position: relative; background-attachment: fixed;} 
 
 #head1sp { background: url("../img_sp/bg1.png") #FF7C92 no-repeat top center; height:    590px; } 
 #head2sp { background: url("../bg/bg1.jpg") no-repeat top center; } 
