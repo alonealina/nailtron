@@ -9,7 +9,8 @@
 	
 <!-- jQuery.jsの読み込み -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/devise.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/app_sp.js"></script>
 <link href="css/animations.css" rel="stylesheet" media="all">
 <link href="css/animation.css" rel="stylesheet" media="all">
 <script src="js/setup.js"></script>
@@ -21,11 +22,8 @@
 <link rel="icon" type="image/png" href="./img2/49.png" sizes="16x16">
 </head>
 
+
 <body id="main">
-
-<div id="a">
-
-
 
 <div id="registration_pc">
   <div class="fixed_head transition6s">
@@ -84,7 +82,7 @@
         <br>You can change the color of various things as many times as you like.
       </div>
       <img src="./img1/resin.png" style="top:107px; left:1410px; position: fixed;" >
-      <img src="./img1/leather.png" style="top:131px; left:1620px; position: fixed;" >
+      <img src="./img1/leather.png" style="top:131px; left:1620px; position: fixed; overflow-x: auto;" >
       <img src="./img1/yarn.png" style="top:90px; left:1200px; position: fixed;" >
       <img src="./img1/skin.png" style="top:310px; left:1280px; position: fixed;" >
       <img src="./img1/metal.png" style="top:330px; left:1520px; position: fixed;" >
@@ -156,8 +154,7 @@
     <div id="head3_black" style="top:1500px; position: absolute;" class="none transition6s">
       <div style="height:2000px; width:2500px; top:0px; left:0px; position: fixed; background-color:black; z-index: 1000;">
         <div class="black_text transition6s none">
-          <div style="top:220px; left:600px; position: fixed; font-size: 150px; color:white; z-index: 20; font-family:'Baskerville Old Face';">Worldwide</div>
-          <div style="top:375px; left:730px; position: fixed; font-size: 100px; color:white; z-index: 20; font-family:'HGｺﾞｼｯｸE';">SPECTRON</div>
+          <div style="width:2000px; top:300px; left:-50px; position: fixed; font-size: 200px; color:white; z-index: 20; font-family:'HGｺﾞｼｯｸE';">BRAND AMBASSADOR</div>
         </div>
       </div>
     </div>
@@ -366,161 +363,46 @@
 
 
 <div id="registration_sp">
-  <div id="head1sp">
-    <img src="./img_sp/s1.png" style="top:50px; position: relative;" ><br/>
-    <img src="./img_sp/s2.png" style="top:200px; right:50px; position: relative;" ><br/>
-    <img src="./img_sp/s3.png" style="top:130px; left:130px; position: relative;" ><br/>
-    <img src="./img_sp/s4.png" style="top:130px; position: relative;" >
+  <div id="main_bg_sp">
+    <img src="./bg/bg_sp.png" style="width:100%; left:0px; position: fixed; z-index: 0;" >
+    <div class="fixed_head_sp transition6s">
+      <a href=""><img src="./img1/logo.png" style="width:54px; top:34px; left:36px; position: absolute;"></a>
+      <div class="twitter_logo_sp"><img src="./img1/twitter_logo.png" style="top:9px; left:2px; position: relative;" ></div>
+      <div class="insta_logo_sp"><img src="./img1/insta_logo.png" style="top:8px; right:-1px; position: relative;" ></div>
+      <select class="select_language_sp"><option>EN</option><option>JA</option><option>CH</option></select>
+    </div>
+
+    <img src="./img1/devise.png" style="width:148px; top:217px; left:114px; position: fixed; z-index:200;" class="devise transition6s">
+
+    <div id="head_top_sp" class="transition6s none">
+      <div style="top:207px; left:122px; right: 122px; position: fixed; font-size: 12px;">Let's enjoy nails easily</div>
+      <img src="./img1/nailtron_logo.png" style="top:323px; left:650px; position: absolute;" ><br/>
+      <div style="top:325px; left:70px; right: 70px; position: fixed; font-size: 10px;">
+        Change the world from your fingertips<br>with<br>dedicated devices and smartphone applications
+      </div>
+      <div style="top:543px; left:127px; right: 127px; position: fixed; font-size: 12px;">To the desired color</div>
+      <div style="position:fixed; width: 100%; top:551px; text-align: center;">
+        <img src="./img1/nailtron_logo2.png" style="width:303px; margin:0 auto; display:inline-block">
+      </div>
+      <div style="position:fixed; width: 100%; top:580px; text-align: center;">
+        <img src="./img1/button_hp.png" style="width:178px; margin:0 auto; display:inline-block">
+      </div>
+    </div>
+
+
+
+
+
+
+    <div id="head1_sp" style="top:1500px; position: absolute;" class="none transition6s">
+      <img src="./img1/nailtron_logo.png" style="top:318px; left:850px; position: fixed;" ><br/>
+      <div style="top:504px; left:903px; position: fixed; font-size: 18px;">
+        Digital cosmetics that combine technology<br>and IT content services A new category of services.
+      </div>
+    </div>
+
   </div>
 
-  <div class="fixed_btn_sp">
-    <a href=""><img class="" src="./img_sp/btn_s.png"></a>
-  </div>
-
-  <div id="head2sp">
-    <div class="sa sa--rl">
-      <img src="./img_sp/s5.png" data-sa_margin="100" style="margin:20px 0px 0px 80px;" /><br/>
-    </div>
-    <div class="sa sa--lr">
-      <img src="./img_sp/s6.png" data-sa_margin="100" style="margin:10px 70px 0px 0px;" /><br/>
-    </div>
-    <div class="sa sa--up">
-      <img src="./img_sp/s7.png" data-sa_margin="100" style="margin:0px 0px 0px 0px;" /><br/>
-      <img src="./img_sp/s8.png" data-sa_margin="100" style="margin:0px 0px 0px 0px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head3sp"></div>
-
-  <div id="head4sp">
-    <div class="sa sa--up">
-      <img src="./img_sp/s10.png" data-sa_margin="100" style="margin:10px 0px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--lr">
-      <img src="./img_sp/s11.png" data-sa_margin="100" style="margin:30px 30px 0px 0px;" />
-      <img src="./img_sp/s12.png" data-sa_margin="100" style="margin:0px 0px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--rl">
-      <img src="./img_sp/s13.png" data-sa_margin="100" style="margin:10px 25px 0px 0px;" />
-      <img src="./img_sp/s14.png" data-sa_margin="100" style="margin:0px 7px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--up">
-      <img src="./img_sp/s15.png" data-sa_margin="100" style="margin:10px 0px 0px 0px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head5sp"></div>
-
-  <div id="head6sp">
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s17.png" data-sa_margin="100" style="margin:0px 0px 0px 0px;" /><br/>
-    </div>
-    <div class="sa sa--up">
-      <img src="./img_sp/s18.png" data-sa_margin="100" style="margin:10px 0px 0px 0px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head7sp"></div>
-
-  <div id="head8sp">
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s20.png" data-sa_margin="100" style="margin:20px 0px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s21.png" data-sa_margin="100" style="margin:20px 0px 0px 13px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head9sp">
-    <div class="sa sa--rotateL">
-      <img src="./img_sp/s22.png" data-sa_margin="100" style="margin:25px 0px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--rotateR">
-      <img src="./img_sp/s23.png" data-sa_margin="100" style="margin:0px 0px 0px 0px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head10sp">
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s24.png" data-sa_margin="100" style="margin:40px 0px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--up">
-      <img src="./img_sp/s25.png" data-sa_margin="100" style="margin:20px 0px 0px 0px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head11sp">
-      <img src="./img_sp/s26.png" data-sa_margin="100" style="margin:150px 0px 0px 0px;" /><br/>
-  </div>
-
-  <div id="head12sp"></div>
-
-  <div id="head13sp">
-    <div class="sa sa--up">
-      <img src="./img_sp/s28.png" data-sa_margin="100" style="margin:10px 0px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--lr">
-      <img src="./img_sp/s29.png" data-sa_margin="100" style="margin:30px 35px 0px 0px;" />
-      <img src="./img_sp/s30.png" data-sa_margin="100" style="margin:0px 0px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--rl">
-      <img src="./img_sp/s31.png" data-sa_margin="100" style="margin:15px 12px 0px 10px;" />
-      <img src="./img_sp/s32.png" data-sa_margin="100" style="margin:0px 0px 0px 15px;" /><br/>
-    </div>
-
-    <div class="sa sa--up">
-      <img src="./img_sp/s33.png" data-sa_margin="100" style="margin:10px 0px 0px 0px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head14sp"></div>
-
-  <div id="head15sp">
-    <div class="sa sa--up">
-      <img src="./img_sp/s35.png" data-sa_margin="100" style="margin:10px 0px 0px 0px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head16sp"></div>
-
-  <div id="head17sp">
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s37.png" data-sa_margin="100" style="margin:10px 0px 0px 12px;" /><br/>
-    </div>
-
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s38.png" data-sa_margin="100" style="margin:0px 17px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s39.png" data-sa_margin="100" style="margin:0px 0px 0px 18px;" /><br/>
-    </div>
-
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s40.png" data-sa_margin="100" style="margin:10px 10px 0px 0px;" /><br/>
-    </div>
-
-    <div class="sa sa--scaleUp">
-      <img src="./img_sp/s41.png" data-sa_margin="100" style="margin:0px 0px 0px 25px;" /><br/>
-    </div>
-  </div>
-
-  <div id="head18sp"></div>
-
-  <div id="head19sp">
-    <img src="./img_sp/s43.png" data-sa_margin="100" style="margin:40px 0px 0px 0px;" /><br/>
-    <img src="./img_sp/s44.png" data-sa_margin="100" style="margin:30px 0px 0px 0px;" />
-  </div>
-
-  <div id="head20sp"></div>
 </div>    
 
 
@@ -542,37 +424,20 @@ sleep(1, hoge)
 </script>
 
 <script>
-$(document).ready(function() {
-  $(window).fadeThis({
-    speed: 350,
-  });
-});
 
-var scrollAnimationElm = document.querySelectorAll('.sa');
-var scrollAnimationFunc = function() {
-  for(var i = 0; i < scrollAnimationElm.length; i++) {
-    var triggerMargin = 200;
-    var elm = scrollAnimationElm[i];
-    var showPos = 0;
-    if(elm.dataset.sa_margin != null) {
-      triggerMargin = parseInt(elm.dataset.sa_margin);
-    }
-    if(elm.dataset.sa_trigger) {
-      showPos = document.querySelector(elm.dataset.sa_trigger).getBoundingClientRect().top + triggerMargin;
-    } else {
-      showPos = elm.getBoundingClientRect().top + triggerMargin;
-    }
-    if (window.innerHeight > showPos) {
-      var delay = (elm.dataset.sa_delay)? elm.dataset.sa_delay : 0;
-      setTimeout(function(index) {
-        scrollAnimationElm[index].classList.add('show');
-      }.bind(null, i), delay);
-    }
-  }
-}
-window.addEventListener('load', scrollAnimationFunc);
-window.addEventListener('scroll', scrollAnimationFunc);
+window.resizeTo(1024,800);
 </script>
+
+<script type="text/javascript">
+  if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) 
+    || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+    document.getElementById('registration_pc').style.display = "none";
+    document.getElementById('registration_sp').style.visibility = "visible";
+  }  else {
+    document.getElementById('registration_pc').style.visibility = "visible";
+    document.getElementById('registration_sp').style.display = "none";
+  }
+  </script>
 	<!------------------------------------------------------------------------->
 
 <div id="kc01" class="kc03"></div>

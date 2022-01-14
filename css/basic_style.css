@@ -25,24 +25,7 @@ Author URL: http://www.subhand.net/
 
 img{ border: none;}
 
-	
-/* スマホへの振り分け */
 
- /* 表示領域が1200px以上の場合に適用するスタイル（パソコン向け） */
-@media screen and (min-width: 801px){
-
-#registration_pc {visibility : visible;}
-#registration_sp {display : none;}
-	
-}	
-
- /* 表示領域が1190px以下の場合に適用するスタイル（スマホ向け） */
-@media screen and (max-width: 800px) {
-
-#registration_pc {display : none;}
-#registration_sp {visibility : visible;}
-
-}
 
 
 body {
@@ -58,9 +41,9 @@ body {
     color: #2e2e2e;
 }
 
-#main_bg { background: url("../bg/bg1.png") no-repeat top center; height:    20500px; position: relative; background-attachment: fixed;} 
+#main_bg { background: url("../bg/bg1.png") no-repeat top center; height: 20500px; position: relative; background-attachment: fixed; overflow: hidden;} 
 
-#head1sp { background: url("../img_sp/bg1.png") #FF7C92 no-repeat top center; height:    590px; } 
+#main_bg_sp {  min-width:375px; height: 20500px; position: relative; text-align: -webkit-center;} 
 #head2sp { background: url("../bg/bg1.jpg") no-repeat top center; } 
 #head3sp { background: url("../img_sp/s9.png") #FFC500 no-repeat top center; height:   72px;} 
 #head4sp { background: url("../bg/bg2.jpg") no-repeat top center; height:   520px;} 
@@ -83,7 +66,7 @@ body {
 
 
 
-.fixed_head
+.fixed_head, .fixed_head_sp
 {
   position: fixed;
   z-index: 100;
@@ -114,13 +97,6 @@ body {
   color: #FFFFFF;
 }
 
-.fixed_btn_sp
-{
-  width: 100%;
-  position: fixed;
-  bottom: 0px; 
-}
-
 .twitter_logo {
   top:31px;
   left:1429px;
@@ -145,6 +121,31 @@ body {
   border-right : solid #9224FF;
 }
 
+.twitter_logo_sp {
+  top:35px;
+  left:164px;
+  height:31px;
+  width:36px;
+  position: absolute;
+  border-radius: 3px 0 0 3px;
+  background-color: #9224FF;
+  opacity: 0.3;
+  border-right : solid #9224FF;
+}
+
+.insta_logo_sp {
+  top:35px;
+  left:202px;
+  height:31px;
+  width:36px;
+  position: absolute;
+  border-radius: 0 3px 3px 0;
+  background-color: #9224FF;
+  opacity: 0.3;
+  border-right : solid #9224FF;
+}
+
+
 .select_language {
   top:30px;
   left:1540px;
@@ -156,6 +157,20 @@ body {
   color:#FFF;
   padding-left:10px;
   font-size:12px;
+  border:none;
+}
+
+.select_language_sp {
+  top:35px;
+  left:260px;
+  height:31px;
+  width:46px;
+  position: absolute;
+  border-radius: 4px;
+  background-color: #9224FF;
+  color:#FFF;
+  padding-left:8px;
+  font-size:10px;
   border:none;
 }
 
@@ -390,11 +405,6 @@ height: 80px;
    100% { transform: translateX(-30%)}
 }
 
-
-
-#a {
-    overflow: hidden;
-}
 
 #container {
 	text-align:center;

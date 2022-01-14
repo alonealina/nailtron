@@ -5,8 +5,10 @@ $(function () {
   var curtain = $('.curtain');
   var bottle_count = $('.bottle_count');
   scroll;
-
+    window.resizeTo(1024,800);
   $win.on('load scroll', function () {
+
+    
     scroll = $win.scrollTop();
     //head表示・非表示開始px
     head_top_disappear_px = 300;
@@ -42,11 +44,11 @@ $(function () {
 
     //head表示・非表示(最低限)
     if (scroll < head_top_disappear_px) {
-      $('#head_top').removeClass('none');
+      $('#head_top_sp').removeClass('none');
       $('#head1').addClass('none');
       $('.fixed_sideline').addClass('none');
     } else if (scroll < head1_appear_px) {
-      $('#head_top').addClass('none');
+      $('#head_top_sp').addClass('none');
       $('#head1').addClass('none');
       $('.fixed_sideline').addClass('none');
     } else if (scroll < head1_disappear_px) {
@@ -471,7 +473,7 @@ $(function(){
 
 $(function(){
   $('#menu_contact').click(function() {
-    document.documentElement.scrollTop = 19500;
+    document.documentElement.scrollTop = 20000;
   });
 });
 
