@@ -1,21 +1,24 @@
 $(function () {
   var $win = $(window);
-  var devise = $('.devise');
-  var devise2 = $('.devise2');
-  var curtain = $('.curtain');
-  var bottle_count = $('.bottle_count');
+  var color_sp1 = $('.color_sp1');
+  var color_sp2 = $('.color_sp2');
+  var devise = $('.devise_sp');
+  var head2_text = $('.head2_text');
+  var head2_content = $('.head2_content');
+  var curtain = $('.curtain_sp');
+  var bottle_count = $('.bottle_count_sp');
   scroll;
     window.resizeTo(1024,800);
   $win.on('load scroll', function () {
-
+    
     
     scroll = $win.scrollTop();
     //head表示・非表示開始px
     head_top_disappear_px = 300;
-    head1_appear_px = 1700;
-    head1_disappear_px = 2500;
-    head2_1_appear_px = 3600;
-    head2_1_disappear_px = 4400;
+    head_text_appear_px = 600;
+    headfix_disappear_px = 1000;
+    head2_appear_px = 1300;
+    head2_disappear_px = 4400;
     head2_2_appear_px = 5200;
     head2_2_disappear_px = 6000;
     head3_1_appear_px = 6200;
@@ -33,32 +36,32 @@ $(function () {
     faq_appear_px = 16500;
     contact_appear_px = 19000;
     //デバイススライド開始・停止px
-    slide_begin_px = 600;
-    slide_stop_px = 1370;
-    slide_begin_px2 = 2800;
-    slide_stop_px2 = 3230;
-    matrix_px = 4400;
-    matrix_end_px = 5200;
+    color_sp1_px = 1600;
+    color_sp2_px = 1900;
+    devise_px = 2200;
+    matrix_px = 2500;
+    matrix_end_px = 2800;
     devise_disappear_px = 6000;
     console.log(scroll);
 
     //head表示・非表示(最低限)
     if (scroll < head_top_disappear_px) {
+      $('#head_fixed_sp').removeClass('none');
       $('#head_top_sp').removeClass('none');
-      $('#head1').addClass('none');
-      $('.fixed_sideline').addClass('none');
-    } else if (scroll < head1_appear_px) {
+      $('.head_fixed_text').addClass('none');
+    } else if (scroll < head_text_appear_px) {
+      $('#head_fixed_sp').removeClass('none');
       $('#head_top_sp').addClass('none');
-      $('#head1').addClass('none');
-      $('.fixed_sideline').addClass('none');
-    } else if (scroll < head1_disappear_px) {
-      $('#head1').removeClass('none');
-      $('.fixed_sideline').removeClass('none');
-    } else if (scroll < head2_1_appear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
+      $('.head_fixed_text').addClass('none');
+    } else if (scroll < headfix_disappear_px) {
+      $('#head_fixed_sp').removeClass('none');
+      $('#head_top_sp').addClass('none');
+      $('.head_fixed_text').removeClass('none');
+    } else if (scroll < head2_appear_px) {
+      $('#head_fixed_sp').addClass('none');
+      $('#head2').addClass('none');
     } else if (scroll < head2_1_disappear_px) {
-      $('#head2_1').removeClass('none');
+      $('#head2').removeClass('none');
     } else if (scroll < head2_2_appear_px) {
       $('#head2_1').addClass('none');
       $('#head2_2').addClass('none');
@@ -138,72 +141,36 @@ $(function () {
       $('#head7').removeClass('none');
     }
 
-    //固定ヘッダー・フッター
-    if (scroll < head3_1_disappear_px) {
-      $('.fixed_head').removeClass('none');
-      $('.fixed_foot').removeClass('none');
-    } else if (scroll < head3_2_appear_px) {
-      $('.fixed_head').addClass('none');
-      $('.fixed_foot').addClass('none');
-    } else {
-      $('.fixed_head').removeClass('none');
-      $('.fixed_foot').removeClass('none');
-    }
-
-    //固定ヘッダーの色
-    if (scroll < head3_1_appear_px) {
-      $('.header_content').css({color: 'black'});
-    } else if (scroll < head3_2_disappear_px) {
-      $('.header_content').css({color: 'white'});
-    } else if (scroll < contact_appear_px) {
-      $('.header_content').css({color: 'black'});
-    } else {
-      $('.header_content').css({color: 'white'});
-    }
-
-    //デバイススライド
-    if (scroll < slide_begin_px) {
-      devise.removeClass('none');
-      devise.css({left: '1270px'});
+    //head2デバイススライド
+    if (scroll < color_sp1_px) {
+      color_sp1.css({left: '0px'});
+      color_sp2.css({left: '450px'});
+      devise.css({left: '450px'});
       devise.css({transform: 'none'});
-    } else if (scroll < slide_stop_px) {
-      devise.removeClass('none');
-      current = 1270 - scroll + slide_begin_px;
-      console.log(current);
-      devise.css({left: current + 'px'});
+    } else if (scroll < color_sp2_px) {
+      color_sp1.css({left: '-450px'});
+      color_sp2.css({left: '0px'});
+      devise.css({left: '450px'});
       devise.css({transform: 'none'});
-    } else if (scroll < slide_begin_px2) {
-      devise.removeClass('none');
-      devise.css({left: '500px'});
+    } else if (scroll < devise_px) {
+      color_sp1.css({left: '-450px'});
+      color_sp2.css({left: '-450px'});
+      devise.css({left: '0px'});
       devise.css({transform: 'none'});
-    } else if (scroll < slide_stop_px2) {
-      devise.removeClass('none');
-      current_left = 500 + scroll - slide_begin_px2;
-      devise.css({left: current_left + 'px'});
-      devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
+      head2_text.removeClass('none');
     } else if (scroll < matrix_px) {
-      devise.removeClass('none');
-      devise.css({left: '930px'});
-      devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
-    } else if (scroll < matrix_end_px) {
-      devise.removeClass('none');
-      devise.css({left: '830px'});
+      color_sp1.css({left: '-450px'});
+      color_sp2.css({left: '-450px'});
+      devise.css({left: '-50px'});
       devise.css({transform: 'matrix(0.97, -0.26, 0.26, 0.97, 0, 0)'});
-    } else if (scroll < devise_disappear_px) {
-      devise.css({left: '930px'});
+      head2_text.addClass('none');
+      head2_content.addClass('none');
+    }else if (scroll < matrix_end_px) {
+      color_sp1.css({left: '-450px'});
+      color_sp2.css({left: '-450px'});
+      devise.css({left: '50px'});
       devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
-      devise.css({zIndex: '200'});
-      devise.removeClass('none');
-    } else if (scroll < head4_devise_px) {
-      devise.addClass('none');
-      devise.css({zIndex: '-100'});
-      devise2.addClass('none');
-      devise2.css({zIndex: '-100'});
-    } else {
-      devise2.removeClass('none');
-      devise2.css({zIndex: '0'});
-      devise.addClass('none');
-      devise.css({zIndex: '-100'});
+      head2_content.removeClass('none');
     }
 
     //カーテン
