@@ -18,16 +18,13 @@ $(function () {
     head_text_appear_px = 600;
     headfix_disappear_px = 1000;
     head2_appear_px = 1300;
-    head2_disappear_px = 4400;
-    head2_2_appear_px = 5200;
-    head2_2_disappear_px = 6000;
-    head3_1_appear_px = 6200;
-    head3_1_model_appear_px = 6600;
-    head3_1_country_appear_px = 7000;
-    head3_1_text_appear_px = 7400;
-    head3_1_disappear_px = 8200;
-    head3_black_text_px = 9000;
-    head3_2_appear_px = 9800;
+    head3_1_appear_px = 3800;
+    head3_1_model_appear_px = 4300;
+    head3_1_text_appear_px = 4800;
+    head3_1_country_appear_px = 5300;
+    head3_1_disappear_px = 5800;
+    head3_black_text_px = 6300;
+    head3_2_appear_px = 6800;
     head3_2_disappear_px = 11000;
     head4_curtain_px = 11500;
     head4_devise_px = 12000;
@@ -36,12 +33,10 @@ $(function () {
     faq_appear_px = 16500;
     contact_appear_px = 19000;
     //デバイススライド開始・停止px
-    color_sp1_px = 1600;
-    color_sp2_px = 1900;
-    devise_px = 2200;
-    matrix_px = 2500;
-    matrix_end_px = 2800;
-    devise_disappear_px = 6000;
+    color_sp1_px = 1800;
+    color_sp2_px = 2300;
+    devise_px = 2800;
+    matrix_px = 3300;
     console.log(scroll);
 
     //head表示・非表示(最低限)
@@ -59,47 +54,40 @@ $(function () {
       $('.head_fixed_text').removeClass('none');
     } else if (scroll < head2_appear_px) {
       $('#head_fixed_sp').addClass('none');
-      $('#head2').addClass('none');
-    } else if (scroll < head2_1_disappear_px) {
-      $('#head2').removeClass('none');
-    } else if (scroll < head2_2_appear_px) {
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-    } else if (scroll < head2_2_disappear_px) {
-      $('#head2_2').removeClass('none');
-      setTimeout(function(){$('.exs').removeClass('none');},1000);
+      $('#head2_sp').addClass('none');
     } else if (scroll < head3_1_appear_px) {
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
+      $('#head2_sp').removeClass('none');
+      $('#head3_1_sp').addClass('none');
     } else if (scroll < head3_1_model_appear_px) {
       //head3地球背景表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').addClass('none');
-      $('#head3_1_sphere').addClass('none');
-      $('#head3_1_text').addClass('none');
-    } else if (scroll < head3_1_country_appear_px) {
-      //head3モデル表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').removeClass('none');
-      $('#head3_1_sphere').addClass('none');
-      $('#head3_1_text').addClass('none');
+      $('#head2_sp').addClass('none');
+      $('#head3_1_sp').removeClass('none');
+      $('#head3_1_model_sp').addClass('none');
+      $('#head3_1_text_sp').addClass('none');
+      $('#head3_1_sphere_sp').addClass('none');
     } else if (scroll < head3_1_text_appear_px) {
-      //head3国球体表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').removeClass('none');
-      $('#head3_1_sphere').removeClass('none');
-      $('#head3_1_text').addClass('none');
-    } else if (scroll < head3_1_disappear_px) {
+      //head3モデル表示
+      $('#head3_1_sp').removeClass('none');
+      $('#head3_1_model_sp').removeClass('none');
+      $('#head3_1_text_sp').addClass('none');
+      $('#head3_1_sphere_sp').addClass('none');
+    } else if (scroll < head3_1_country_appear_px) {
       //head3テキスト表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').removeClass('none');
-      $('#head3_1_sphere').removeClass('none');
-      $('#head3_1_text').removeClass('none');
-      $('#head3_black').addClass('none');
+      $('#head3_1_sp').removeClass('none');
+      $('#head3_1_model_sp').removeClass('none');
+      $('#head3_1_text_sp').removeClass('none');
+      $('#head3_1_sphere_sp').addClass('none');
+    } else if (scroll < head3_1_disappear_px) {
+      //head3国球体表示
+      $('#head3_1_sp').removeClass('none');
+      $('#head3_1_model_sp').removeClass('none');
+      $('#head3_1_text_sp').addClass('none');
+      $('#head3_1_sphere_sp').removeClass('none');
+      $('#head3_black_sp').addClass('none');
     } else if (scroll < head3_black_text_px) {
       //ブラックアウト
-      $('#head3_1').addClass('none');
-      $('#head3_black').removeClass('none');
+      $('#head3_1_sp').addClass('none');
+      $('#head3_black_sp').removeClass('none');
       $('.black_text').addClass('none');
     } else if (scroll < head3_2_appear_px) {
       //テキスト表示
@@ -156,19 +144,22 @@ $(function () {
       color_sp1.css({left: '-450px'});
       color_sp2.css({left: '-450px'});
       devise.css({left: '0px'});
+      devise.css({top: '180px'});
       devise.css({transform: 'none'});
       head2_text.removeClass('none');
     } else if (scroll < matrix_px) {
       color_sp1.css({left: '-450px'});
       color_sp2.css({left: '-450px'});
       devise.css({left: '-50px'});
+      devise.css({top: '150px'});
       devise.css({transform: 'matrix(0.97, -0.26, 0.26, 0.97, 0, 0)'});
       head2_text.addClass('none');
       head2_content.addClass('none');
-    }else if (scroll < matrix_end_px) {
+    } else {
       color_sp1.css({left: '-450px'});
       color_sp2.css({left: '-450px'});
       devise.css({left: '50px'});
+      devise.css({top: '150px'});
       devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
       head2_content.removeClass('none');
     }
