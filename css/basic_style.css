@@ -273,6 +273,90 @@ body {
 }
 
 
+.zhang_color_sp {
+  height: 150px;
+  left:36px; 
+  top: 75px;
+  opacity: 0;
+}
+
+.zhang_color_sp:hover {
+  height:250px;
+  left:20px;
+  opacity: 1;
+}
+
+.rola_color_sp {
+  height: 150px;
+  left:15px; 
+  top: 245px;
+  opacity: 0;
+}
+
+.rola_color_sp:hover {
+  height:250px;
+  top:200px;
+  opacity: 1;
+}
+
+.gaga_color_sp {
+  height: 150px;
+  right: 30px;
+  top: 107px;
+  opacity: 0;
+}
+
+.gaga_color_sp:hover {
+  height:250px;
+  right: -10px;
+  top:75px;
+  opacity: 1;
+}
+
+.bts_color_sp {
+  height: 150px;
+  left: 19px;
+  top: 425px;
+  opacity: 0;
+}
+
+.bts_color_sp:hover {
+  height:250px;
+  left:20px;
+  top: 360px;
+  opacity: 1;
+}
+
+.blackpink_color_sp {
+  height: 150px;
+  right: 20px;
+  top: 470px;
+  opacity: 0;
+}
+
+.blackpink_color_sp:hover {
+  height:250px;
+  right: 20px;
+  top: 380px;
+  opacity: 1;
+}
+
+.billy_color_sp {
+  height: 150px;
+  right: 30px;
+  top: 282px;
+  opacity: 0;
+}
+
+.billy_color_sp:hover {
+  height:250px;
+  right: 30px;
+  top: 225px;
+  opacity: 1;
+}
+
+
+
 .border {
   margin: 0 10px 7px 10px;
 }
@@ -292,13 +376,23 @@ body {
   left: 393px;
 }
 
+.faq_box_sp {
+  position: relative;
+  padding-left: 36px;
+  padding-right: 36px;
+  text-align: left;
+  font-size: 18px;
+  top: 334px;
+}
+
 /* === チェックボックス ========================================== */
-.faq_box > input {
+.faq_box > input, .faq_box_sp > input {
 display       : none;                                   /* 非表示 */
 }
 
 /* === 文書のエリアの高さ（「もっと見る」が表示されているとき）=== */
-.faq_box > input[type="checkbox"]:not(:checked) ~ .faq_content {
+.faq_box > input[type="checkbox"]:not(:checked) ~ .faq_content,
+.faq_box_sp > input[type="checkbox"]:not(:checked) ~ .faq_content {
 height        : 0px;
 overflow: hidden;
 
@@ -321,6 +415,16 @@ width: 40px;
 height: 40px;
 }
 
+.faq_box_sp > input[type="checkbox"]:not(:checked) + label {
+  background-image       : url(../img1/plus_sp.png);
+  background-repeat: no-repeat;
+  position      : absolute;
+  display       : inline-block;
+  right         : 36px;
+  width: 24px;
+  height: 24px;
+}
+
 /* --- ボタンに表示する文字（開いているとき） -------------------- */
 .faq_box > input[type="checkbox"]:checked + label {
   background-image       : url(../img1/minus.png);
@@ -332,8 +436,18 @@ width: 40px;
 height: 40px;
 }
 
+.faq_box_sp > input[type="checkbox"]:checked + label {
+  background-image       : url(../img1/minus_sp.png);
+  background-repeat: no-repeat;
+  position      : absolute;
+display       : inline-block;
+right         : 36px;
+width: 24px;
+height:24px;
+}
+
 .faq_box > input[type="checkbox"]:checked + .label1 {
-  top       : -60px ;
+  top: -60px ;
 }
 
 .faq_box > input[type="checkbox"]:checked + .label2,
@@ -342,15 +456,15 @@ height: 40px;
 .faq_box > input[type="checkbox"]:checked + .label5,
 .faq_box > input[type="checkbox"]:checked + .label6,
 .faq_box > input[type="checkbox"]:checked + .label7 {
-  top       : -4px ;
+  top: -4px ;
 }
 
 .label1 {
-  top       : -30px ;
+  top: 46px;
 }
 
 .label2, .label3, .label4, .label5, .label6, .label7 {
-  top       : 26px ;
+  top: 26px ;
 }
 
 

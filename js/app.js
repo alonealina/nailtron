@@ -120,7 +120,6 @@ $(function () {
       //head4テキスト表示
       $('#head4').removeClass('none');
       $('#head4_text').removeClass('none');
-      $('#head4').removeClass('none');
       $('#head5').addClass('none');
     } else if (scroll < faq_appear_px) {
       //head5表示
