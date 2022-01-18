@@ -31,7 +31,7 @@ $(function () {
     head4_text_px = 9800;
     head4_disappear_px = 11000;
     faq_appear_px = 12000;
-    contact_appear_px = 19000;
+    contact_appear_px = 14000;
     //デバイススライド開始・停止px
     color_sp1_px = 1800;
     color_sp2_px = 2300;

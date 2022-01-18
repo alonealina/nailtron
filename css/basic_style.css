@@ -383,6 +383,7 @@ body {
   text-align: left;
   font-size: 18px;
   top: 334px;
+  pointer-events: none;
 }
 
 /* === チェックボックス ========================================== */
@@ -423,6 +424,7 @@ height: 40px;
   right         : 36px;
   width: 24px;
   height: 24px;
+  pointer-events: auto;
 }
 
 /* --- ボタンに表示する文字（開いているとき） -------------------- */
@@ -444,6 +446,7 @@ display       : inline-block;
 right         : 36px;
 width: 24px;
 height:24px;
+pointer-events: auto;
 }
 
 .faq_box > input[type="checkbox"]:checked + .label1 {
@@ -460,14 +463,40 @@ height:24px;
 }
 
 .label1 {
-  top: 46px;
+  top: -30px;
 }
 
 .label2, .label3, .label4, .label5, .label6, .label7 {
   top: 26px ;
 }
 
+.label1_sp {
+  top: 47px;
+}
 
+.label2_sp {
+  top: 62px ;
+}
+
+.label3_sp {
+  top: 77px ;
+}
+
+.label4_sp {
+  top: 92px ;
+}
+
+.label5_sp {
+  top: 107px ;
+}
+
+.faq_content {
+  position:relative;
+  font-size:10px;
+  overflow-wrap:break-word;
+  width:250px;
+  margin-bottom: 2px;
+}
 
 
 /*以下FAQ(追加)のボタンについて*/
