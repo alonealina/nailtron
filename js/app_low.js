@@ -457,7 +457,7 @@ $(function () {
 });
 
 $(function(){
-  $('#add_faq').click(function() {
+  $('#add_faq_low').click(function() {
     if ($(this).prop('checked')) {
       $('.add_faq_box').show();
     } else {
@@ -467,13 +467,13 @@ $(function(){
 });
 
 $(function(){
-  $('#menu_faq').click(function() {
+  $('#menu_faq_low').click(function() {
     document.documentElement.scrollTop = 17700;
   });
 });
 
 $(function(){
-  $('#menu_contact').click(function() {
+  $('#menu_contact_low').click(function() {
     document.documentElement.scrollTop = 20000;
   });
 });

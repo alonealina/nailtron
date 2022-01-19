@@ -16,27 +16,27 @@ $(function () {
     //head表示・非表示開始px
     head_top_disappear_px = 300;
     head_text_appear_px = 600;
-    headfix_disappear_px = 1000;
-    head2_appear_px = 1300;
-    head3_1_appear_px = 3800;
-    head3_1_model_appear_px = 4300;
-    head3_1_text_appear_px = 4800;
-    head3_1_country_appear_px = 5300;
-    head3_1_disappear_px = 5800;
-    head3_black_text_px = 6300;
-    head3_2_appear_px = 6800;
-    head3_2_disappear_px = 8000;
-    head4_curtain_px = 8800;
-    head4_date_px = 9300;
-    head4_text_px = 9800;
-    head4_disappear_px = 11000;
-    faq_appear_px = 12000;
-    contact_appear_px = 14000;
+    headfix_disappear_px = 900;
+    head2_appear_px = 1200;
+    head3_1_appear_px = 3300;
+    head3_1_model_appear_px = 3800;
+    head3_1_text_appear_px = 4200;
+    head3_1_country_appear_px = 4600;
+    head3_1_disappear_px = 5000;
+    head3_black_text_px = 5400;
+    head3_2_appear_px = 5800;
+    head3_2_disappear_px = 6800;
+    head4_curtain_px = 7400;
+    head4_date_px = 7800;
+    head4_text_px = 8200;
+    head4_disappear_px = 9200;
+    faq_appear_px = 10200;
+    contact_appear_px = 12000;
     //デバイススライド開始・停止px
-    color_sp1_px = 1800;
-    color_sp2_px = 2300;
-    devise_px = 2800;
-    matrix_px = 3300;
+    color_sp1_px = 1500;
+    color_sp2_px = 2000;
+    devise_px = 2400;
+    matrix_px = 2800;
     console.log(scroll);
 
     //head表示・非表示(最低限)
@@ -182,9 +182,11 @@ $(function () {
     if (scroll < head4_date_px) {
       //head4_date表示まで
       $('.head4_date').css({left: '-300px'});
+      $('.head4_line').css({left: '-300px'});
     } else {
       //head4_date表示
-      $('.head4_date').css({left: '36px'});
+      $('.head4_date').css({left: '35px'});
+      $('.head4_line').css({left: '80px'});
     }
 
     //head4_text
