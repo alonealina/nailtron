@@ -1,8 +1,8 @@
 $(function () {
   var $win = $(window);
-  var devise = $('.devise');
-  var devise2 = $('.devise2');
-  var curtain = $('.curtain');
+  var devise = $('.devise_low');
+  var devise2 = $('.devise2_low');
+  var curtain = $('.curtain_low');
   var bottle_count = $('.bottle_count');
   scroll;
   $win.on('load scroll', function () {
@@ -43,107 +43,107 @@ $(function () {
 
     //head表示・非表示(最低限)
     if (scroll < head_top_disappear_px) {
-      $('#head_top').removeClass('none');
-      $('#head1').addClass('none');
+      $('#head_top_low').removeClass('none');
+      $('#head1_low').addClass('none');
       $('.fixed_sideline').addClass('none');
     } else if (scroll < head1_appear_px) {
-      $('#head_top').addClass('none');
-      $('#head1').addClass('none');
+      $('#head_top_low').addClass('none');
+      $('#head1_low').addClass('none');
       $('.fixed_sideline').addClass('none');
     } else if (scroll < head1_disappear_px) {
-      $('#head1').removeClass('none');
+      $('#head1_low').removeClass('none');
       $('.fixed_sideline').removeClass('none');
     } else if (scroll < head2_1_appear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
     } else if (scroll < head2_1_disappear_px) {
-      $('#head2_1').removeClass('none');
+      $('#head2_1_low').removeClass('none');
     } else if (scroll < head2_2_appear_px) {
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
     } else if (scroll < head2_2_disappear_px) {
-      $('#head2_2').removeClass('none');
+      $('#head2_2_low').removeClass('none');
       setTimeout(function(){$('.exs').removeClass('none');},1000);
     } else if (scroll < head3_1_appear_px) {
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
     } else if (scroll < head3_1_model_appear_px) {
       //head3地球背景表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').addClass('none');
-      $('#head3_1_sphere').addClass('none');
-      $('#head3_1_text').addClass('none');
+      $('#head3_1_low').removeClass('none');
+      $('#head3_1_model_low').addClass('none');
+      $('#head3_1_sphere_low').addClass('none');
+      $('#head3_1_text_low').addClass('none');
     } else if (scroll < head3_1_country_appear_px) {
       //head3モデル表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').removeClass('none');
-      $('#head3_1_sphere').addClass('none');
-      $('#head3_1_text').addClass('none');
+      $('#head3_1_low').removeClass('none');
+      $('#head3_1_model_low').removeClass('none');
+      $('#head3_1_sphere_low').addClass('none');
+      $('#head3_1_text_low').addClass('none');
     } else if (scroll < head3_1_text_appear_px) {
       //head3国球体表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').removeClass('none');
-      $('#head3_1_sphere').removeClass('none');
-      $('#head3_1_text').addClass('none');
+      $('#head3_1_low').removeClass('none');
+      $('#head3_1_model_low').removeClass('none');
+      $('#head3_1_sphere_low').removeClass('none');
+      $('#head3_1_text_low').addClass('none');
     } else if (scroll < head3_1_disappear_px) {
       //head3テキスト表示
-      $('#head3_1').removeClass('none');
-      $('#head3_1_model').removeClass('none');
-      $('#head3_1_sphere').removeClass('none');
-      $('#head3_1_text').removeClass('none');
-      $('#head3_black').addClass('none');
+      $('#head3_1_low').removeClass('none');
+      $('#head3_1_model_low').removeClass('none');
+      $('#head3_1_sphere_low').removeClass('none');
+      $('#head3_1_text_low').removeClass('none');
+      $('#head3_black_low').addClass('none');
     } else if (scroll < head3_black_text_px) {
       //ブラックアウト
-      $('#head3_1').addClass('none');
-      $('#head3_black').removeClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').removeClass('none');
     } else if (scroll < head3_2_appear_px) {
       //テキスト表示
-      $('#head3_black').removeClass('none');
-      $('#head3_2').addClass('none');
+      $('#head3_black_low').removeClass('none');
+      $('#head3_2_low').addClass('none');
     } else if (scroll < head3_2_disappear_px) {
       //head3_2表示
-      $('#head3_black').addClass('none');
-      $('#head3_2').removeClass('none');
-      $('#head4').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').removeClass('none');
+      $('#head4_low').addClass('none');
     } else if (scroll < head4_curtain_px) {
       //head3_2非表示
-      $('#head3_2').addClass('none');
-      $('#head4').removeClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').removeClass('none');
     } else if (scroll < head4_text_px) {
       //head4テキスト表示まで
-      $('#head4').removeClass('none');
-      $('#head4_text').addClass('none');
+      $('#head4_low').removeClass('none');
+      $('#head4_text_low').addClass('none');
     } else if (scroll < head4_disappear_px) {
       //head4テキスト表示
-      $('#head4').removeClass('none');
-      $('#head4_text').removeClass('none');
-      $('#head5').addClass('none');
+      $('#head4_low').removeClass('none');
+      $('#head4_text_low').removeClass('none');
+      $('#head5_low').addClass('none');
     } else if (scroll < faq_appear_px) {
       //head5表示
-      $('#head4').addClass('none');
-      $('#head5').removeClass('none');
-      $('#head6').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').removeClass('none');
+      $('#head6_low').addClass('none');
     } else if (scroll < contact_appear_px) {
       //head6(FAQ)表示
-      $('#head5').addClass('none');
-      $('#head6').removeClass('none');
-      $('#head7').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').removeClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < 100000) {
       //head7(Contact)表示
-      $('#head6').addClass('none');
-      $('#head7').removeClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').removeClass('none');
     }
 
     //固定ヘッダー・フッター
     if (scroll < head3_1_disappear_px) {
       $('.fixed_head').removeClass('none');
-      $('.fixed_foot').removeClass('none');
+      $('.fixed_foot_sp').removeClass('none');
     } else if (scroll < head3_2_appear_px) {
       $('.fixed_head').addClass('none');
-      $('.fixed_foot').addClass('none');
+      $('.fixed_foot_sp').addClass('none');
     } else {
       $('.fixed_head').removeClass('none');
-      $('.fixed_foot').removeClass('none');
+      $('.fixed_foot_sp').removeClass('none');
     }
 
     //固定ヘッダーの色
@@ -160,33 +160,33 @@ $(function () {
     //デバイススライド
     if (scroll < slide_begin_px) {
       devise.removeClass('none');
-      devise.css({left: '1270px'});
+      devise.css({left: '1000px'});
       devise.css({transform: 'none'});
     } else if (scroll < slide_stop_px) {
       devise.removeClass('none');
-      current = 1270 - scroll + slide_begin_px;
+      current = 1000 - scroll + slide_begin_px;
       console.log(current);
       devise.css({left: current + 'px'});
       devise.css({transform: 'none'});
     } else if (scroll < slide_begin_px2) {
       devise.removeClass('none');
-      devise.css({left: '500px'});
+      devise.css({left: '270px'});
       devise.css({transform: 'none'});
     } else if (scroll < slide_stop_px2) {
       devise.removeClass('none');
-      current_left = 500 + scroll - slide_begin_px2;
+      current_left = 230 + scroll - slide_begin_px2;
       devise.css({left: current_left + 'px'});
       devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
     } else if (scroll < matrix_px) {
       devise.removeClass('none');
-      devise.css({left: '930px'});
+      devise.css({left: '700px'});
       devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
     } else if (scroll < matrix_end_px) {
       devise.removeClass('none');
-      devise.css({left: '830px'});
+      devise.css({left: '610px'});
       devise.css({transform: 'matrix(0.97, -0.26, 0.26, 0.97, 0, 0)'});
     } else if (scroll < devise_disappear_px) {
-      devise.css({left: '930px'});
+      devise.css({left: '700px'});
       devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
       devise.css({zIndex: '200'});
       devise.removeClass('none');
@@ -226,17 +226,10 @@ $(function () {
       $('.img_ex3').css({left: '-300px'});
       $('.img_ex4').css({left: '-300px'});
     } else {
-      $('.img_ex1').css({left: '360px'});
-      $('.img_ex2').css({left: '730px'});
-      $('.img_ex3').css({left: '1100px'});
-      $('.img_ex4').css({left: '1470px'});
-    }
-
-    //black_text
-    if (scroll < head3_black_text_px) {
-      $('.black_text').addClass('none');
-    } else {
-      $('.black_text').removeClass('none');
+      $('.img_ex1').css({left: '220px'});
+      $('.img_ex2').css({left: '470px'});
+      $('.img_ex3').css({left: '720px'});
+      $('.img_ex4').css({left: '970px'});
     }
 
     //国球体
@@ -246,15 +239,21 @@ $(function () {
       $('.sphere_ame').css({left: '-300px'});
       $('.sphere_bra').css({left: '-300px'});
     } else {
-      $('.sphere_por').css({left: '450px'});
-      $('.sphere_jap').css({left: '750px'});
-      $('.sphere_ame').css({left: '1050px'});
-      $('.sphere_bra').css({left: '1350px'});
+      $('.sphere_por').css({left: '200px'});
+      $('.sphere_jap').css({left: '450px'});
+      $('.sphere_ame').css({left: '700px'});
+      $('.sphere_bra').css({left: '950px'});
+    }
+
+    //black_text
+    if (scroll < head3_black_text_px) {
+      $('.black_text').addClass('none');
+    } else {
+      $('.black_text').removeClass('none');
     }
 
     //head4テキスト
     if (scroll < head4_text_px) {
-      //head4テキスト表示まで
       $('.head4_text1').css({left: '2500px'});
       $('.head4_text2').css({left: '2500px'});
       $('.head4_text3').css({left: '2500px'});
@@ -262,13 +261,12 @@ $(function () {
       $('.head4_text5').css({left: '2500px'});
       $('.head4_text6').css({left: '2500px'});
     } else {
-      //head4テキスト表示
-      $('.head4_text1').css({left: '1272px'});
-      $('.head4_text2').css({left: '1037px'});
-      $('.head4_text3').css({left: '1106px'});
-      $('.head4_text4').css({left: '824px'});
-      $('.head4_text5').css({left: '517px'});
-      $('.head4_text6').css({left: '378px'});
+      $('.head4_text1').css({left: '850px'});
+      $('.head4_text2').css({left: '640px'});
+      $('.head4_text3').css({left: '700px'});
+      $('.head4_text4').css({left: '524px'});
+      $('.head4_text5').css({left: '300px'});
+      $('.head4_text6').css({left: '200px'});
     }
 
 
@@ -342,117 +340,117 @@ $(function () {
 
     //head表示・非表示(高速スクロール時のデザイン崩れ防止処理)
     if (scroll < head2_1_appear_px) {
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head2_1_disappear_px) {
-      $('#head1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head2_2_appear_px) {
-      $('#head1').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head2_2_disappear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head3_1_appear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head3_1_disappear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head3_2_appear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head3_2_disappear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < head4_disappear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head5').addClass('none');
-      $('#head6').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head5_low').addClass('none');
+      $('#head6_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < faq_appear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head7').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head7_low').addClass('none');
     } else if (scroll < contact_appear_px) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
     } else if (scroll < 100000) {
-      $('#head1').addClass('none');
-      $('#head2_1').addClass('none');
-      $('#head2_2').addClass('none');
-      $('#head3_1').addClass('none');
-      $('#head3_black').addClass('none');
-      $('#head3_2').addClass('none');
-      $('#head4').addClass('none');
-      $('#head5').addClass('none');
+      $('#head1_low').addClass('none');
+      $('#head2_1_low').addClass('none');
+      $('#head2_2_low').addClass('none');
+      $('#head3_1_low').addClass('none');
+      $('#head3_black_low').addClass('none');
+      $('#head3_2_low').addClass('none');
+      $('#head4_low').addClass('none');
+      $('#head5_low').addClass('none');
     }
 
   });

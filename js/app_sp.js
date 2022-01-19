@@ -290,16 +290,6 @@ $(function () {
 });
 
 $(function(){
-  $('#add_faq').click(function() {
-    if ($(this).prop('checked')) {
-      $('.add_faq_box').show();
-    } else {
-      $('.add_faq_box').hide();
-    }
-  });
-});
-
-$(function(){
   $('#menu_faq').click(function() {
     document.documentElement.scrollTop = 17700;
   });

@@ -26,6 +26,20 @@ Author URL: http://www.subhand.net/
 img{ border: none;}
 
 
+/* 画面サイズによる振り分け */
+
+/* 表示領域が1600px以上の場合に適用するスタイル */
+@media screen and (min-width: 1600px) {
+  #registration_pc {visibility : visible;}
+  #registration_pc_low {display : none;}
+}	
+
+/* 表示領域が1590px以下の場合に適用するスタイル */
+@media screen and (max-width: 1590px) {
+  #registration_pc {display : none;}
+  #registration_pc_low {visibility : visible;}
+}
+
 
 
 body {
@@ -41,7 +55,7 @@ body {
     color: #2e2e2e;
 }
 
-#registration_pc {overflow-x: scroll;}
+#registration_pc, #registration_pc_low {overflow-x: hidden;}
 #main_bg { background: url("../bg/bg1.png") no-repeat top center; height: 20500px; position: relative; background-attachment: fixed; } 
 
 #main_bg_sp {  min-width:375px; height: 15500px; position: relative; text-align: -webkit-center;} 
@@ -81,26 +95,39 @@ body {
   right: 100px;
 }
 
+.fixed_foot_sp
+{
+  position: fixed;
+  z-index: 100;
+  bottom: 30px; 
+  right: 40px;
+}
+
 .fixed_sideline
 {
   position: fixed;
   z-index: 100;
-  left: 214px;
+}
+
+.fixed_sideline_low
+{
+  position: fixed;
+  z-index: 100;
+  left: 130px;
 }
 
 .bottle_count
 {
   position: fixed;
   z-index: 110;
-  bottom: 80px; 
-  right: 117px;
+  bottom: 60px; 
+  right: 57px;
   font: italic normal normal 25px/29px Lucida Bright;
   color: #FFFFFF;
 }
 
 .twitter_logo {
   top:31px;
-  left:1429px;
   height:35px;
   width:41px;
   position: absolute;
@@ -112,7 +139,6 @@ body {
 
 .insta_logo {
   top:31px;
-  left:1471px;
   height:35px;
   width:41px;
   position: absolute;
@@ -270,6 +296,89 @@ body {
   height:450px;
   left: 1170px;
   top: 400px;
+  opacity: 1;
+}
+
+
+.zhang_color_low {
+  height: 333px;
+  left:320px; 
+  top: 50px;
+  opacity: 0;
+}
+
+.zhang_color_low:hover {
+  height:450px;
+  left:240px;
+  opacity: 1;
+}
+
+.rola_color_low {
+  height: 320px;
+  left:600px; 
+  top: 130px;
+  opacity: 0;
+}
+
+.rola_color_low:hover {
+  height:400px;
+  top:60px;
+  opacity: 1;
+}
+
+.gaga_color_low {
+  height: 345px;
+  left:980px;
+  top: 90px;
+  opacity: 0;
+}
+
+.gaga_color_low:hover {
+  height:410px;
+  left:910px;
+  top:90px;
+  opacity: 1;
+}
+
+.bts_color_low {
+  height: 285px;
+  left: 75px;
+  top: 300px;
+  opacity: 0;
+}
+
+.bts_color_low:hover {
+  height:370px;
+  left:75px;
+  top: 220px;
+  opacity: 1;
+}
+
+.blackpink_color_low {
+  height: 357px;
+  left: 360px;
+  top: 384px;
+  opacity: 0;
+}
+
+.blackpink_color_low:hover {
+  height:430px;
+  left:320px;
+  top: 320px;
+  opacity: 1;
+}
+
+.billy_color_low {
+  height: 296px;
+  left: 803px;
+  top: 415px;
+  opacity: 0;
+}
+
+.billy_color_low:hover {
+  height:420px;
+  left: 770px;
+  top: 300px;
   opacity: 1;
 }
 
