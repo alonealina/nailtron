@@ -32,7 +32,7 @@ $(function () {
     faq_appear_px = 10200;
     contact_appear_px = 12000;
     //デバイススライド開始・停止px
-    color_ipad1_px = 1500;
+    color_ipad1_px = 1600;
     color_ipad2_px = 2000;
     devise_px = 2400;
     matrix_px = 2800;
@@ -63,25 +63,25 @@ $(function () {
       $('#head3_1_ipad').removeClass('none');
       $('#head3_1_model_ipad').addClass('none');
       $('#head3_1_text_ipad').addClass('none');
-      $('#head3_1_ipadhere_ipad').addClass('none');
+      $('#head3_1_sphere_ipad').addClass('none');
     } else if (scroll < head3_1_text_appear_px) {
       //head3モデル表示
       $('#head3_1_ipad').removeClass('none');
       $('#head3_1_model_ipad').removeClass('none');
       $('#head3_1_text_ipad').addClass('none');
-      $('#head3_1_ipadhere_ipad').addClass('none');
+      $('#head3_1_sphere_ipad').addClass('none');
     } else if (scroll < head3_1_country_appear_px) {
       //head3テキスト表示
       $('#head3_1_ipad').removeClass('none');
       $('#head3_1_model_ipad').removeClass('none');
       $('#head3_1_text_ipad').removeClass('none');
-      $('#head3_1_ipadhere_ipad').addClass('none');
+      $('#head3_1_sphere_ipad').addClass('none');
     } else if (scroll < head3_1_disappear_px) {
       //head3国球体表示
       $('#head3_1_ipad').removeClass('none');
       $('#head3_1_model_ipad').removeClass('none');
       $('#head3_1_text_ipad').addClass('none');
-      $('#head3_1_ipadhere_ipad').removeClass('none');
+      $('#head3_1_sphere_ipad').removeClass('none');
       $('#head3_black_ipad').addClass('none');
     } else if (scroll < head3_black_text_px) {
       //ブラックアウト
@@ -127,34 +127,34 @@ $(function () {
     //head2デバイススライド
     if (scroll < color_ipad1_px) {
       color_ipad1.css({left: '0px'});
-      color_ipad2.css({left: '450px'});
-      devise.css({left: '450px'});
+      color_ipad2.css({left: '1050px'});
+      devise.css({left: '1050px'});
       devise.css({transform: 'none'});
     } else if (scroll < color_ipad2_px) {
-      color_ipad1.css({left: '-450px'});
+      color_ipad1.css({left: '-1050px'});
       color_ipad2.css({left: '0px'});
-      devise.css({left: '450px'});
+      devise.css({left: '1050px'});
       devise.css({transform: 'none'});
     } else if (scroll < devise_px) {
-      color_ipad1.css({left: '-450px'});
-      color_ipad2.css({left: '-450px'});
+      color_ipad1.css({left: '-1050px'});
+      color_ipad2.css({left: '-1050px'});
       devise.css({left: '0px'});
-      devise.css({top: '180px'});
+      devise.css({top: '280px'});
       devise.css({transform: 'none'});
       head2_text.removeClass('none');
     } else if (scroll < matrix_px) {
-      color_ipad1.css({left: '-450px'});
-      color_ipad2.css({left: '-450px'});
+      color_ipad1.css({left: '-1050px'});
+      color_ipad2.css({left: '-1050px'});
       devise.css({left: '-50px'});
-      devise.css({top: '150px'});
+      devise.css({top: '280px'});
       devise.css({transform: 'matrix(0.97, -0.26, 0.26, 0.97, 0, 0)'});
       head2_text.addClass('none');
       head2_content.addClass('none');
     } else {
-      color_ipad1.css({left: '-450px'});
-      color_ipad2.css({left: '-450px'});
+      color_ipad1.css({left: '-1050px'});
+      color_ipad2.css({left: '-1050px'});
       devise.css({left: '50px'});
-      devise.css({top: '150px'});
+      devise.css({top: '280px'});
       devise.css({transform: 'matrix(0.97, 0.26, -0.26, 0.97, 0, 0)'});
       head2_text.addClass('none');
       head2_content.removeClass('none');
@@ -184,8 +184,8 @@ $(function () {
       $('.head4_line').css({left: '-300px'});
     } else {
       //head4_date表示
-      $('.head4_date').css({left: '35px'});
-      $('.head4_line').css({left: '80px'});
+      $('.head4_date').css({left: '80px'});
+      $('.head4_line').css({left: '150px'});
     }
 
     //head4_text
@@ -198,19 +198,7 @@ $(function () {
     }
 
     //head表示・非表示(高速スクロール時のデザイン崩れ防止処理)
-    if (scroll < head_top_disappear_px) {
-      $('#head2_ipad').addClass('none');
-      $('#head3_1_ipad').addClass('none');
-      $('#head3_black_ipad').addClass('none');
-      $('#head3_2_ipad').addClass('none');
-      $('#head4_ipad').addClass('none');
-      $('#head5_ipad').addClass('none');
-      $('#head6_ipad').addClass('none');
-      $('#head7_ipad').addClass('none');
-    } else if (scroll < head2_appear_px) {
-      //全消し
-      $('#head_fixed_ipad').addClass('none');
-      $('#head_top_ipad').addClass('none');
+    if (scroll < head2_appear_px) {
       $('#head2_ipad').addClass('none');
       $('#head3_1_ipad').addClass('none');
       $('#head3_black_ipad').addClass('none');

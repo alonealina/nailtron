@@ -54,8 +54,8 @@ body {
 
 #registration_pc, #registration_pc_low {overflow-x: hidden;}
 #main_bg { background: url("../bg/bg1.png") no-repeat top center; height: 20500px; position: relative; background-attachment: fixed; } 
-#main_bg_sp {  min-width:375px; height: 15500px; position: relative; text-align: -webkit-center;} 
-#main_bg_ipad {  min-width:768px; height: 15500px; position: relative; text-align: -webkit-center;} 
+#main_bg_sp {  min-width:375px; height: 13500px; position: relative; text-align: -webkit-center;} 
+#main_bg_ipad {  min-width:768px; height: 13500px; position: relative; text-align: -webkit-center;} 
 
 
 
@@ -164,8 +164,8 @@ body {
 
 .twitter_logo_ipad {
   top:33px;
-  left:560px;
-  height:33px;
+  left:520px;
+  height:34px;
   width:38px;
   position: absolute;
   border-radius: 3px 0 0 3px;
@@ -177,8 +177,8 @@ body {
 
 .insta_logo_ipad {
   top:33px;
-  left:600px;
-  height:33px;
+  left:560px;
+  height:34px;
   width:38px;
   position: absolute;
   border-radius: 0 3px 3px 0;
@@ -219,8 +219,8 @@ body {
 }
 
 .select_language_ipad {
-  top:35px;
-  left:680px;
+  top:33px;
+  left:640px;
   height:34px;
   width:50px;
   position: absolute;
@@ -498,6 +498,90 @@ body {
 }
 
 
+.zhang_color_ipad {
+  height: 350px;
+  left: 59px; 
+  top: 174px;
+  opacity: 0;
+}
+
+.zhang_color_ipad:hover {
+  height:400px;
+  left:20px;
+  opacity: 1;
+}
+
+.rola_color_ipad {
+  height: 280px;
+  left: 40px;
+  top: 420px;
+  opacity: 0;
+}
+
+.rola_color_ipad:hover {
+  height:350px;
+  top:370px;
+  left: 40px;
+  opacity: 1;
+}
+
+.gaga_color_ipad {
+  height: 340px;
+  right: -5px;
+  top: 142px;
+  opacity: 0;
+}
+
+.gaga_color_ipad:hover {
+  height:400px;
+  right: -10px;
+  top:95px;
+  opacity: 1;
+}
+
+.bts_color_ipad {
+  height: 300px;
+  left: 42px;
+  top: 694px;
+  opacity: 0;
+}
+
+.bts_color_ipad:hover {
+  height:350px;
+  left:60px;
+  top: 630px;
+  opacity: 1;
+}
+
+.blackpink_color_ipad {
+  height: 300px;
+  right: 60px;
+  top: 670px;
+  opacity: 0;
+}
+
+.blackpink_color_ipad:hover {
+  height:350px;
+  right: 60px;
+  top: 620px;
+  opacity: 1;
+}
+
+.billy_color_ipad {
+  height: 296px;
+  right: 59px;
+  top: 408px;
+  opacity: 0;
+}
+
+.billy_color_ipad:hover {
+  height:380px;
+  right: 40px;
+  top: 375px;
+  opacity: 1;
+}
+
+
 
 .border {
   margin: 0 10px 7px 10px;
@@ -537,15 +621,26 @@ body {
   pointer-events: none;
 }
 
+.faq_box_ipad {
+  position: relative;
+  padding-left: 66px;
+  padding-right: 66px;
+  text-align: left;
+  font-size: 18px;
+  top: 334px;
+  pointer-events: none;
+}
+
 /* === チェックボックス ========================================== */
-.faq_box > input, .faq_box_low > input, .faq_box_sp > input {
+.faq_box > input, .faq_box_low > input, .faq_box_sp > input, .faq_box_ipad > input {
 display       : none;                                   /* 非表示 */
 }
 
 /* === 文書のエリアの高さ（「もっと見る」が表示されているとき）=== */
 .faq_box > input[type="checkbox"]:not(:checked) ~ .faq_content,
 .faq_box_low > input[type="checkbox"]:not(:checked) ~ .faq_content_low,
-.faq_box_sp > input[type="checkbox"]:not(:checked) ~ .faq_content_sp {
+.faq_box_sp > input[type="checkbox"]:not(:checked) ~ .faq_content_sp,
+.faq_box_ipad > input[type="checkbox"]:not(:checked) ~ .faq_content_ipad {
 height        : 0px;
 overflow: hidden;
 
@@ -581,6 +676,17 @@ height: 40px;
   pointer-events: auto;
 }
 
+.faq_box_ipad > input[type="checkbox"]:not(:checked) + label {
+  background-image       : url(../img1/plus_sp.png);
+  background-repeat: no-repeat;
+  position      : absolute;
+  display       : inline-block;
+  right         : 66px;
+  width: 32px;
+  height: 32px;
+  pointer-events: auto;
+}
+
 /* --- ボタンに表示する文字（開いているとき） -------------------- */
 .faq_box > input[type="checkbox"]:checked + label,
 .faq_box_low > input[type="checkbox"]:checked + label {
@@ -599,6 +705,17 @@ height: 40px;
   position      : absolute;
 display       : inline-block;
 right         : 36px;
+width: 32px;
+height:32px;
+pointer-events: auto;
+}
+
+.faq_box_ipad > input[type="checkbox"]:checked + label {
+  background-image       : url(../img1/minus.png);
+  background-repeat: no-repeat;
+  position      : absolute;
+display       : inline-block;
+right         : 66px;
 width: 32px;
 height:32px;
 pointer-events: auto;
@@ -653,11 +770,39 @@ pointer-events: auto;
   top: 95px ;
 }
 
+.label1_ipad {
+  top: 32px;
+}
+
+.label2_ipad {
+  top: 47px ;
+}
+
+.label3_ipad {
+  top: 62px ;
+}
+
+.label4_ipad {
+  top: 77px ;
+}
+
+.label5_ipad {
+  top: 92px ;
+}
+
 .faq_content_sp {
   position:relative;
   font-size:12px;
   overflow-wrap:break-word;
   width:270px;
+  margin-bottom: 2px;
+}
+
+.faq_content_ipad {
+  position:relative;
+  font-size:15px;
+  overflow-wrap:break-word;
+  width:670px;
   margin-bottom: 2px;
 }
 
@@ -736,6 +881,19 @@ input#add_faq_low:checked + label {
 .info_address_sp{
   text-align: left;
   font: normal normal normal 28px/42px Meiryo;
+  letter-spacing: 1.4px;
+  color: #FFFFFF;
+  margin-top: 5px;
+	animation : text_scroll 40s linear infinite;
+}
+@keyframes text_scroll{
+   0% { transform: translateX(0%)}
+   100% { transform: translateX(-10%)}
+}
+
+.info_address_ipad{
+  text-align: left;
+  font: normal normal normal 42px/60px Meiryo;
   letter-spacing: 1.4px;
   color: #FFFFFF;
   margin-top: 5px;
@@ -944,36 +1102,27 @@ small{
   top: 8px;
 }
 
-#menu-btn-check:checked ~ .menu-btn span {
+#menu-btn-check:checked ~ .menu-btn span,
+#menu-btn-check_ipad:checked ~ .menu-btn span {
   background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
 }
-#menu-btn-check:checked ~ .menu-btn span::before {
+#menu-btn-check:checked ~ .menu-btn span::before,
+#menu-btn-check_ipad:checked ~ .menu-btn span::before {
   bottom: 0;
   transform: rotate(45deg);
 }
-#menu-btn-check:checked ~ .menu-btn span::after {
+#menu-btn-check:checked ~ .menu-btn span::after,
+#menu-btn-check_ipad:checked ~ .menu-btn span::after {
   top: 0;
   transform: rotate(-45deg);
 }
 
-#menu-btn-check:checked ~ .menu-btn span {
-  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
-}
-#menu-btn-check:checked ~ .menu-btn span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-#menu-btn-check:checked ~ .menu-btn span::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-#menu-btn-check {
+#menu-btn-check, #menu-btn-check_ipad {
   display: none;
 }
 
 
-.menu-content {
+.menu-content, .menu-content_ipad {
   width: 70%;
   height: 100%;
   position: fixed;
@@ -985,23 +1134,29 @@ small{
   opacity: 0.7;
 }
 
-.menu-content ul {
+.menu-content ul,
+.menu-content_ipad ul {
   padding: 180px 10px 0;
 }
-.menu-content ul li {
-  /*border-bottom: solid 1px #ffffff;*/
+.menu-content ul li,
+.menu-content_ipad ul li {
   list-style: none;
 }
-.menu-content ul li a {
+.menu-content ul li a,
+.menu-content_ipad ul li a {
   display: block;
   width: 100%;
-  font: normal normal normal 12px/18px Meiryo;
   box-sizing: border-box;
   color:#ffffff;
   text-decoration: none;
   padding: 5px 0px;
   position: relative;
 }
+
+.menu-content ul li a {
+  font: normal normal normal 12px/18px Meiryo;
+}
+
 /* .menu-content ul li a::before {
   content: "";
   width: 7px;
@@ -1014,7 +1169,8 @@ small{
   top: 16px;
 } */
 
-#menu-btn-check:checked ~ .menu-content {
+#menu-btn-check:checked ~ .menu-content,
+#menu-btn-check_ipad:checked ~ .menu-content_ipad {
   left: 30%;/*メニューを画面内へ*/
 }
 

@@ -32,7 +32,7 @@ $(function () {
     faq_appear_px = 10200;
     contact_appear_px = 12000;
     //デバイススライド開始・停止px
-    color_sp1_px = 1500;
+    color_sp1_px = 1600;
     color_sp2_px = 2000;
     devise_px = 2400;
     matrix_px = 2800;
@@ -198,19 +198,7 @@ $(function () {
     }
 
     //head表示・非表示(高速スクロール時のデザイン崩れ防止処理)
-    if (scroll < head_top_disappear_px) {
-      $('#head2_sp').addClass('none');
-      $('#head3_1_sp').addClass('none');
-      $('#head3_black_sp').addClass('none');
-      $('#head3_2_sp').addClass('none');
-      $('#head4_sp').addClass('none');
-      $('#head5_sp').addClass('none');
-      $('#head6_sp').addClass('none');
-      $('#head7_sp').addClass('none');
-    } else if (scroll < head2_appear_px) {
-      //全消し
-      $('#head_fixed_sp').addClass('none');
-      $('#head_top_sp').addClass('none');
+    if (scroll < head2_appear_px) {
       $('#head2_sp').addClass('none');
       $('#head3_1_sp').addClass('none');
       $('#head3_black_sp').addClass('none');
