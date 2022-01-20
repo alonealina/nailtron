@@ -32,10 +32,17 @@ img{ border: none;}
 @media screen and (min-width: 1600px) {
   #registration_pc {visibility : visible;}
   #registration_pc_low {display : none;}
+  #registration_ipad {display : none;}
 }	
 
 /* 表示領域が1590px以下の場合に適用するスタイル */
-@media screen and (max-width: 1590px) {
+@media screen and (max-width: 1599px) and (min-width: 900px) {
+  #registration_pc {display : none;}
+  #registration_pc_low {visibility : visible;}
+}
+
+/* 表示領域が1590px以下の場合に適用するスタイル */
+@media screen and (max-width: 899px) {
   #registration_pc {display : none;}
   #registration_pc_low {visibility : visible;}
 }
@@ -120,6 +127,16 @@ body {
 {
   position: fixed;
   z-index: 110;
+  bottom: 80px; 
+  right: 117px;
+  font: italic normal normal 25px/29px Lucida Bright;
+  color: #FFFFFF;
+}
+
+.bottle_count_low
+{
+  position: fixed;
+  z-index: 110;
   bottom: 60px; 
   right: 57px;
   font: italic normal normal 25px/29px Lucida Bright;
@@ -150,7 +167,7 @@ body {
 
 .twitter_logo_sp {
   top:35px;
-  left:164px;
+  left:224px;
   height:31px;
   width:36px;
   position: absolute;
@@ -162,7 +179,7 @@ body {
 
 .insta_logo_sp {
   top:35px;
-  left:202px;
+  left:262px;
   height:31px;
   width:36px;
   position: absolute;
@@ -189,7 +206,7 @@ body {
 
 .select_language_sp {
   top:35px;
-  left:260px;
+  left:315px;
   height:31px;
   width:46px;
   position: absolute;

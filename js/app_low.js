@@ -3,7 +3,7 @@ $(function () {
   var devise = $('.devise_low');
   var devise2 = $('.devise2_low');
   var curtain = $('.curtain_low');
-  var bottle_count = $('.bottle_count');
+  var bottle_count = $('.bottle_count_low');
   scroll;
   $win.on('load scroll', function () {
 
@@ -221,28 +221,28 @@ $(function () {
 
     //head2_2 img
     if (scroll < head2_2_appear_px) {
-      $('.img_ex1').css({left: '-300px'});
-      $('.img_ex2').css({left: '-300px'});
-      $('.img_ex3').css({left: '-300px'});
-      $('.img_ex4').css({left: '-300px'});
+      $('.img_ex1_low').css({left: '-300px'});
+      $('.img_ex2_low').css({left: '-300px'});
+      $('.img_ex3_low').css({left: '-300px'});
+      $('.img_ex4_low').css({left: '-300px'});
     } else {
-      $('.img_ex1').css({left: '220px'});
-      $('.img_ex2').css({left: '470px'});
-      $('.img_ex3').css({left: '720px'});
-      $('.img_ex4').css({left: '970px'});
+      $('.img_ex1_low').css({left: '220px'});
+      $('.img_ex2_low').css({left: '470px'});
+      $('.img_ex3_low').css({left: '720px'});
+      $('.img_ex4_low').css({left: '970px'});
     }
 
     //国球体
     if (scroll < head3_1_country_appear_px) {
-      $('.sphere_por').css({left: '-300px'});
-      $('.sphere_jap').css({left: '-300px'});
-      $('.sphere_ame').css({left: '-300px'});
-      $('.sphere_bra').css({left: '-300px'});
+      $('.sphere_por_low').css({left: '-300px'});
+      $('.sphere_jap_low').css({left: '-300px'});
+      $('.sphere_ame_low').css({left: '-300px'});
+      $('.sphere_bra_low').css({left: '-300px'});
     } else {
-      $('.sphere_por').css({left: '200px'});
-      $('.sphere_jap').css({left: '450px'});
-      $('.sphere_ame').css({left: '700px'});
-      $('.sphere_bra').css({left: '950px'});
+      $('.sphere_por_low').css({left: '200px'});
+      $('.sphere_jap_low').css({left: '450px'});
+      $('.sphere_ame_low').css({left: '700px'});
+      $('.sphere_bra_low').css({left: '950px'});
     }
 
     //black_text
@@ -254,19 +254,19 @@ $(function () {
 
     //head4テキスト
     if (scroll < head4_text_px) {
-      $('.head4_text1').css({left: '2500px'});
-      $('.head4_text2').css({left: '2500px'});
-      $('.head4_text3').css({left: '2500px'});
-      $('.head4_text4').css({left: '2500px'});
-      $('.head4_text5').css({left: '2500px'});
-      $('.head4_text6').css({left: '2500px'});
+      $('.head4_text1_low').css({left: '2500px'});
+      $('.head4_text2_low').css({left: '2500px'});
+      $('.head4_text3_low').css({left: '2500px'});
+      $('.head4_text4_low').css({left: '2500px'});
+      $('.head4_text5_low').css({left: '2500px'});
+      $('.head4_text6_low').css({left: '2500px'});
     } else {
-      $('.head4_text1').css({left: '850px'});
-      $('.head4_text2').css({left: '640px'});
-      $('.head4_text3').css({left: '700px'});
-      $('.head4_text4').css({left: '524px'});
-      $('.head4_text5').css({left: '300px'});
-      $('.head4_text6').css({left: '200px'});
+      $('.head4_text1_low').css({left: '850px'});
+      $('.head4_text2_low').css({left: '640px'});
+      $('.head4_text3_low').css({left: '700px'});
+      $('.head4_text4_low').css({left: '524px'});
+      $('.head4_text5_low').css({left: '300px'});
+      $('.head4_text6_low').css({left: '200px'});
     }
 
 
