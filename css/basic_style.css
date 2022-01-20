@@ -11,18 +11,6 @@ Author URL: http://www.subhand.net/
 ---------------------------------------------*/
 * {margin:0;padding:0;}
 
-.impact   {font-size:20pt; font-weight:bold;}
-.impact2  {color:red;}
-.impact3  {background:yellow; color:#000;}
-#impact4  {underline;}
-.impact5  {background:#173B50; padding:2px 5px; color:#fff;}
-.impact6  {background:#f4f4f4; padding:3px; line-height:1.1;}
-.impact7  {background: #B60000; padding:2px 5px; color:#fff;}
-.style2   {color: #FF0000}
-.style3   {color: #333333}
-.style4   {color: #000000}
-
-
 img{ border: none;}
 
 
@@ -39,12 +27,14 @@ img{ border: none;}
 @media screen and (max-width: 1599px) and (min-width: 900px) {
   #registration_pc {display : none;}
   #registration_pc_low {visibility : visible;}
+  #registration_ipad {display : none;}
 }
 
 /* 表示領域が1590px以下の場合に適用するスタイル */
 @media screen and (max-width: 899px) {
   #registration_pc {display : none;}
-  #registration_pc_low {visibility : visible;}
+  #registration_pc_low {display : none;}
+  #registration_ipad {visibility : visible;}
 }
 
 
@@ -64,31 +54,12 @@ body {
 
 #registration_pc, #registration_pc_low {overflow-x: hidden;}
 #main_bg { background: url("../bg/bg1.png") no-repeat top center; height: 20500px; position: relative; background-attachment: fixed; } 
-
 #main_bg_sp {  min-width:375px; height: 15500px; position: relative; text-align: -webkit-center;} 
-#head2sp { background: url("../bg/bg1.jpg") no-repeat top center; } 
-#head3sp { background: url("../img_sp/s9.png") #FFC500 no-repeat top center; height:   72px;} 
-#head4sp { background: url("../bg/bg2.jpg") no-repeat top center; height:   520px;} 
-#head5sp { background: url("../img_sp/s16.png") #FF9A0D no-repeat top center; height:   46px;} 
-#head6sp { background: url("../bg/bg1.jpg") no-repeat top center; height:   370px;} 
-#head7sp { background: url("../img_sp/s19.png") #FFC500 no-repeat top center; height:   46px;} 
-#head8sp { background: url("../bg/bg2.jpg") no-repeat top center; height:   625px;} 
-#head9sp { background: url("../bg/bg1.jpg") no-repeat top center; height:   470px;} 
-#head10sp { background: url("../bg/bg2.jpg") no-repeat top center; height:   610px;} 
-#head11sp { background: #797979 top center; height:   400px; } 
-#head12sp { background: url("../img_sp/s27.png") #FFC500 no-repeat top center; height:   72px;} 
-#head13sp { background: url("../bg/bg2.jpg") no-repeat top center; height:   540px;} 
-#head14sp { background: url("../img_sp/s34.png") #FF9A0D no-repeat top center; height:   46px;} 
-#head15sp { height:   250px;} 
-#head16sp { background: url("../img_sp/s36.png") #FFC500 no-repeat top center; height:   43px;} 
-#head17sp { background: url("../bg/bg2.jpg") top center; height:   2830px;} 
-#head18sp { background: url("../img_sp/s42.png") #FF9A0D no-repeat top center; height:   43px;} 
-#head19sp { height:   320px;} 
-#head20sp { background: url("../img_sp/s45.png") #FFC500 no-repeat top center; height:   100px;} 
+#main_bg_ipad {  min-width:768px; height: 15500px; position: relative; text-align: -webkit-center;} 
 
 
 
-.fixed_head, .fixed_head_sp
+.fixed_head, .fixed_head_sp, .fixed_head_ipad
 {
   position: fixed;
   z-index: 100;
@@ -102,7 +73,7 @@ body {
   right: 100px;
 }
 
-.fixed_foot_sp
+.fixed_foot_low
 {
   position: fixed;
   z-index: 100;
@@ -167,7 +138,7 @@ body {
 
 .twitter_logo_sp {
   top:35px;
-  left:224px;
+  left:174px;
   height:31px;
   width:36px;
   position: absolute;
@@ -175,11 +146,12 @@ body {
   background-color: #9224FF;
   opacity: 0.3;
   border-right : solid #9224FF;
+  z-index:100;
 }
 
 .insta_logo_sp {
   top:35px;
-  left:262px;
+  left:212px;
   height:31px;
   width:36px;
   position: absolute;
@@ -187,6 +159,33 @@ body {
   background-color: #9224FF;
   opacity: 0.3;
   border-right : solid #9224FF;
+  z-index:100;
+}
+
+.twitter_logo_ipad {
+  top:33px;
+  left:560px;
+  height:33px;
+  width:38px;
+  position: absolute;
+  border-radius: 3px 0 0 3px;
+  background-color: #9224FF;
+  opacity: 0.3;
+  border-right : solid #9224FF;
+  z-index:100;
+}
+
+.insta_logo_ipad {
+  top:33px;
+  left:600px;
+  height:33px;
+  width:38px;
+  position: absolute;
+  border-radius: 0 3px 3px 0;
+  background-color: #9224FF;
+  opacity: 0.3;
+  border-right : solid #9224FF;
+  z-index:100;
 }
 
 
@@ -206,7 +205,7 @@ body {
 
 .select_language_sp {
   top:35px;
-  left:315px;
+  left:270px;
   height:31px;
   width:46px;
   position: absolute;
@@ -216,6 +215,22 @@ body {
   padding-left:8px;
   font-size:10px;
   border:none;
+  z-index:100;
+}
+
+.select_language_ipad {
+  top:35px;
+  left:680px;
+  height:34px;
+  width:50px;
+  position: absolute;
+  border-radius: 4px;
+  background-color: #9224FF;
+  color:#FFF;
+  padding-left:8px;
+  font-size:10px;
+  border:none;
+  z-index:100;
 }
 
 .devise {
@@ -894,4 +909,112 @@ small{
 }
 .btn_box1:before {animation: anime 2s ease-out infinite;}
 .btn_box1:after {animation: anime 2s ease-out 1s infinite;}
+
+
+/*以下ハンバーガーメニューについて*/
+
+.menu-btn {
+  position: fixed;
+  top: 31px;
+  right: 10px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  border: none;
+  border-radius: 50px;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+
+.menu-content {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background: #150217 0% 0% no-repeat padding-box;
+  transition: all 0.5s;/*アニメーション設定*/
+  opacity: 0.7;
+}
+
+.menu-content ul {
+  padding: 180px 10px 0;
+}
+.menu-content ul li {
+  /*border-bottom: solid 1px #ffffff;*/
+  list-style: none;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font: normal normal normal 12px/18px Meiryo;
+  box-sizing: border-box;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 5px 0px;
+  position: relative;
+}
+/* .menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+} */
+
+#menu-btn-check:checked ~ .menu-content {
+  left: 30%;/*メニューを画面内へ*/
+}
 

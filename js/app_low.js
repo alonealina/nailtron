@@ -137,13 +137,13 @@ $(function () {
     //固定ヘッダー・フッター
     if (scroll < head3_1_disappear_px) {
       $('.fixed_head').removeClass('none');
-      $('.fixed_foot_sp').removeClass('none');
+      $('.fixed_foot_low').removeClass('none');
     } else if (scroll < head3_2_appear_px) {
       $('.fixed_head').addClass('none');
-      $('.fixed_foot_sp').addClass('none');
+      $('.fixed_foot_low').addClass('none');
     } else {
       $('.fixed_head').removeClass('none');
-      $('.fixed_foot_sp').removeClass('none');
+      $('.fixed_foot_low').removeClass('none');
     }
 
     //固定ヘッダーの色

@@ -6,7 +6,6 @@ $(function () {
   var head2_text = $('.head2_text');
   var head2_content = $('.head2_content');
   var curtain = $('.curtain_sp');
-  var bottle_count = $('.bottle_count_sp');
   scroll;
     window.resizeTo(1024,800);
   $win.on('load scroll', function () {
