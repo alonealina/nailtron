@@ -136,6 +136,10 @@ body {
   border-right : solid #9224FF;
 }
 
+.twitter_logo:hover, .insta_logo:hover {
+  opacity: 1;
+}
+
 .twitter_logo_sp {
   top:35px;
   left:174px;
@@ -1129,9 +1133,8 @@ small{
   top: 0;
   left: 100%;/*leftの値を変更してメニューを画面外へ*/
   z-index: 80;
-  background: #150217 0% 0% no-repeat padding-box;
   transition: all 0.5s;/*アニメーション設定*/
-  opacity: 0.7;
+  background: rgba(21, 2, 23,0.7);
 }
 
 .menu-content ul,
@@ -1156,18 +1159,6 @@ small{
 .menu-content ul li a {
   font: normal normal normal 12px/18px Meiryo;
 }
-
-/* .menu-content ul li a::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-top: solid 2px #ffffff;
-  border-right: solid 2px #ffffff;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 11px;
-  top: 16px;
-} */
 
 #menu-btn-check:checked ~ .menu-content,
 #menu-btn-check_ipad:checked ~ .menu-content_ipad {

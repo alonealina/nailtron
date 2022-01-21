@@ -275,5 +275,16 @@ $(function () {
       $('#head5_sp').addClass('none');
     }
 
+    const check = document.getElementById("menu-btn-check");
+  
+    check.addEventListener("click", function (e) {
+      if (check.checked) {
+        $('#logo_sp').addClass('none');
+        $('#hp_sp').addClass('none');
+      } else {
+        $('#logo_sp').removeClass('none');
+        $('#hp_sp').removeClass('none');
+      }
+    });
   });
 });

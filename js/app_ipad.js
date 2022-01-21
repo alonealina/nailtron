@@ -275,5 +275,17 @@ $(function () {
       $('#head5_ipad').addClass('none');
     }
 
+    const check = document.getElementById("menu-btn-check_ipad");
+  
+    check.addEventListener("click", function (e) {
+      if (check.checked) {
+        $('#logo_ipad').addClass('none');
+        $('#hp_ipad').addClass('none');
+      } else {
+        $('#logo_ipad').removeClass('none');
+        $('#hp_ipad').removeClass('none');
+      }
+    });
+
   });
 });
