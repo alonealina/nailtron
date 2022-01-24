@@ -180,12 +180,12 @@ $(function () {
     //head4_date
     if (scroll < head4_date_px) {
       //head4_date表示まで
-      $('.head4_date').css({left: '-300px'});
-      $('.head4_line').css({left: '-300px'});
+      $('.head4_date_ipad').css({left: '-300px'});
+      $('.head4_line_ipad').css({left: '-300px'});
     } else {
       //head4_date表示
-      $('.head4_date').css({left: '80px'});
-      $('.head4_line').css({left: '150px'});
+      $('.head4_date_ipad').css({left: '80px'});
+      $('.head4_line_ipad').css({left: '150px'});
     }
 
     //head4_text
